@@ -5,8 +5,8 @@ show_downloads: True
 navigation:
   - title: Home
     url: /
-  - title: Clusters_study
-    url: Clusters
-  - title: toxicity_study
-    url: Toxicity
+  - title: Clusters
+    url: Clusters_study
+  - title: Toxicity
+    url: toxicity_study
   
