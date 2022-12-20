@@ -11,4 +11,12 @@ Study of the toxicity of the comments and the co-commenting activities in far ri
 
 ![falcon](/assets/img/favicon.png)
 
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 
