@@ -1,6 +1,7 @@
 theme: jekyll-theme-minimal
 title: Strauss Website
 description: Study of toxicity in far right channel videos and clusters on youtube using the YouNiverse dataset. The goal is to see if these channels generate more toxic behavior and isolate users.
+theme: minima
 show_downloads: True
 navigation:
   - title: Home
