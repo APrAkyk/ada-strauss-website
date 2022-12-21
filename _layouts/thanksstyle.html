@@ -58,6 +58,8 @@
 
     <script>
       const selectEl = document.getElementById("image-select");
+      const noGraphique = parseInt(selectEl.value[5]);
+      console.log(noGraphique);
       switch (selectEl.value) {
         case "graph1":
           document.getElementById("graphique-1").src = "../assets/img/favicon.png"
