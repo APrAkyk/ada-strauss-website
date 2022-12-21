@@ -1,6 +1,3 @@
----
-layout: cayman
----
 # ADA Strauss Website
 ## Introduction
 
