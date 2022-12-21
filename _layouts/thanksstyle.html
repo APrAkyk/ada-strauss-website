@@ -63,14 +63,14 @@
       document.getElementById("graph_input_2").addEventListener("change", updateImage)
       document.getElementById("graph_input_3").addEventListener("change", updateImage)
       document.getElementById("graph_input_4").addEventListener("change", updateImage)
-      
+
       function updateImage() {
         const noGraphique = parseInt(selectEl.value[5]);
 
-        const checked1 = document.getElementById("graph_input_1").value;
-        const checked2 = document.getElementById("graph_input_2").value;
-        const checked3 = document.getElementById("graph_input_3").value;
-        const checked4 = document.getElementById("graph_input_4").value;
+        const checked1 = document.getElementById("graph_input_1").value === "on";
+        const checked2 = document.getElementById("graph_input_2").value === "on";
+        const checked3 = document.getElementById("graph_input_3").value === "on";
+        const checked4 = document.getElementById("graph_input_4").value === "on";
 
         console.log(`../assets/img/graphique-${noGraphique}-${checked1}${checked2}${checked3}${checked4}.png`);
 
