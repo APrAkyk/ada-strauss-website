@@ -61,10 +61,15 @@
       const noGraphique = parseInt(selectEl.value[5]);
       console.log(noGraphique);
 
-      const checked1 = document.gt
+      const checked1 = document.getElementById("graph_input_1").value;
+      const checked2 = document.getElementById("graph_input_2").value;
+      const checked3 = document.getElementById("graph_input_3").value;
+      const checked4 = document.getElementById("graph_input_4").value;
+
+      console.log(`../assets/img/graphique-${noGraphique}-${checked1}${checked2}${checked3}${checked4}.png`);
 
       // graphique-3-0110.png
-      document.getElementById("graphique-1").src = `../assets/img/graphique-${noGraphique}-`
+      document.getElementById("graphique-1").src = `../assets/img/graphique-${noGraphique}-${checked1}${checked2}${checked3}${checked4}.png`
       
     </script>
 
