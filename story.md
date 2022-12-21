@@ -4,5 +4,24 @@ layout: cayman
 
 **Data story : the great aventure of the YouNiverse**
 
-{% include image.html url="http://jekyllrb.com" max-width="200px" file="logo.png" alt="Jekyll logo" caption="This is the Jekyll logo." %}
+from dash import Dash, dcc
 
+app = Dash(__name__)
+
+
+app.layout = dcc.Markdown('''
+    *This text will be italic*
+
+    _This will also be italic_
+
+
+    **This text will be bold**
+
+    __This will also be bold__
+
+    _You **can** combine them_
+''')
+
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
