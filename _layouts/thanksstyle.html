@@ -44,8 +44,10 @@
     <script>
       const selectEl = document.getElementById("pet-select");
       selectEl.addEventListener("change", (ev) => {
+        console.log("yoooo")
         switch (selectEl.value) {
           case "dog":
+        console.log("dog")
             document.getElementById("graphique-1").src="assets/img/favicon.png";
             break;
           case "cat" :
