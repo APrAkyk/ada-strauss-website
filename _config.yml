@@ -5,8 +5,8 @@ show_downloads: True
 navigation:
   - title: Home
     url: /
-  - title: Clusters
-    url: Clusters_study
-  - title: Toxicity
-    url: toxicity_study
+  - title: Data Story
+    url: story
+  - title: Thanks & Credentials
+    url: thanks
   
