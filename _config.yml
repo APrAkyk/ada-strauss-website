@@ -9,4 +9,6 @@ navigation:
     url: story
   - title: Thanks & Credentials
     url: thanks
+  - title: Team
+    url: team
   
