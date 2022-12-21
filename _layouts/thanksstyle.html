@@ -45,14 +45,14 @@
       <option value="graph6">graph6</option>
     </select>
     
-    <label for="graph1-chek-1">Option 1</label>
-    <input class="graph1_input" type="graph1-chek-1" checked>
-    <label for="graph1-chek-2">Option 2</label>
-    <input class="graph1_input" type="graph1-chek-2" checked>
-    <label for="graph1-chek-3">Option 3</label>
-    <input class="graph1_input" type="graph1-chek-3" checked>
-    <label for="graph1-chek-4">Option 4</label>
-    <input class="graph1_input" type="graph1-chek-4" checked>
+    <label for="graph_input_1">Option 1</label>
+    <input id="graph_input_1" type="checkbox" checked>
+    <label for="graph_input_2">Option 2</label>
+    <input id="graph_input_2" type="checkbox" checked>
+    <label for="graph_input_3">Option 3</label>
+    <input id="graph_input_3" type="checkbox" checked>
+    <label for="graph_input_4">Option 4</label>
+    <input id="graph_input_4" type="checkbox" checked>
 
     <img id="graphique-1" src="../assets/img/profilAriane.png" />
 
@@ -60,29 +60,11 @@
       const selectEl = document.getElementById("image-select");
       const noGraphique = parseInt(selectEl.value[5]);
       console.log(noGraphique);
-      switch (selectEl.value) {
-        case "graph1":
-          document.getElementById("graphique-1").src = "../assets/img/favicon.png"
-          break;
-        case "graph2":
-          document.getElementById("graphique-2").src = "../assets/img/favicon.png"
-          break;
-        case "graph3":
-          document.getElementById("graphique-3").src = "../assets/img/favicon.png"
-          break;
-        case "graph4":
-          document.getElementById("graphique-4").src = "../assets/img/favicon.png"
-          break;
-        case "graph5":
-          document.getElementById("graphique-5").src = "../assets/img/favicon.png"
-          break;
-        case "graph6":
-          document.getElementById("graphique-6").src = "../assets/img/favicon.png"
-          break;
-      
-        default:
-          break;
-      }
+
+      const checked1 = document.gt
+
+      // graphique-3-0110.png
+      document.getElementById("graphique-1").src = `../assets/img/graphique-${noGraphique}-`
       
     </script>
 
