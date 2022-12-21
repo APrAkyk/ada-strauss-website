@@ -34,7 +34,7 @@
       <label for="pet-select">Choose a pet:</label>
 
     <select name="pets" id="pet-select">
-        <option value="">--Please choose an option--</option>
+        <option value="oiseau">--Please choose an option--</option>
         <option value="dog">Dog</option>
         <option value="cat">Cat</option>
     </select>
@@ -49,14 +49,10 @@
             document.getElementById("graphique-1").src="assets/img/favicon.png";
             break;
           case "cat" :
-            <iframe id="inlineFrameExample"
-            title="Inline Frame Example"
-            width="300"
-            height="200"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
-            </iframe>
+            document.getElementById("graphique-1").src="assets/img/favicon.png";
             break;
           default:
+            document.getElementById("graphique-1").src="assets/img/profilAriane.png";
             break;
         }
       })
