@@ -1,45 +1,49 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    
+<html lang="{{ site.lang | default: " en-US" }}">
+
+<head>
+  <meta charset="UTF-8">
+
   {% seo %}
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="black">
-    <meta name="apple-mobile-web-app-status-bar-style" content="white">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    {% include head-custom.html %}
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style"
+    type="text/css" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="black">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  {% include head-custom.html %}
 
-  </head>
-  <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
+</head>
 
-    <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="https://github.com/epfl-ada/ada-2022-project-strauss" class="btn">Project github</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="https://aprakyk.github.io/ada-strauss-website/Homepage" class="btn">Home</a>
-        <a href="https://aprakyk.github.io/ada-strauss-website/story" class="btn">Data story</a>
-        <a href="https://aprakyk.github.io/ada-strauss-website/thanks" class="btn">Thanks & Credentials</a>
-        <a href="https://aprakyk.github.io/ada-strauss-website/team" class="btn">Team</a>
-      {% endif %}
-    </header>
+<body>
+  <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-    <main id="content" class="main-content" role="main">
-      <label for="pet-select">Choose a pet:</label>
+  <header class="page-header" role="banner">
+    <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+    <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline
+      }}</h2>
+    {% if site.github.is_project_page %}
+    <a href="https://github.com/epfl-ada/ada-2022-project-strauss" class="btn">Project github</a>
+    {% endif %}
+    {% if site.show_downloads %}
+    <a href="https://aprakyk.github.io/ada-strauss-website/Homepage" class="btn">Home</a>
+    <a href="https://aprakyk.github.io/ada-strauss-website/story" class="btn">Data story</a>
+    <a href="https://aprakyk.github.io/ada-strauss-website/thanks" class="btn">Thanks & Credentials</a>
+    <a href="https://aprakyk.github.io/ada-strauss-website/team" class="btn">Team</a>
+    {% endif %}
+  </header>
+
+  <main id="content" class="main-content" role="main">
+    <label for="pet-select">Choose a pet:</label>
 
     <select name="pets" id="pet-select">
-        <option value="">--Please choose an option--</option>
-        <option value="dog">Dog</option>
-        <option value="cat">Cat</option>
+      <option value="">--Please choose an option--</option>
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
     </select>
 
-    <img id="graphique-1" src="assets/img/profilAriane.png"/>
+    <img id="graphique-1" src="../assets/img/profilAriane.png" />
 
     <script>
       const selectEl = document.getElementById("pet-select");
@@ -47,38 +51,32 @@
         console.log("yoooo")
         switch (selectEl.value) {
           case "dog":
-        console.log("dog")
-            document.getElementById("graphique-1").src="assets/img/favicon.png";
+            console.log("dog")
+            document.getElementById("graphique-1").src = "../assets/img/favicon.png";
             break;
-          case "cat" :
-            document.getElementById("graphique-1").src="assets/img/favicon.png";
+          case "cat":
+            document.getElementById("graphique-1").src = "../assets/img/favicon.png";
             break;
           default:
-            document.getElementById("graphique-1").src="assets/img/profilAriane.png";
+            document.getElementById("graphique-1").src = "../assets/img/profilAriane.png";
             break;
         }
       })
     </script>
-      
-    <iframe id="inlineFrameExample"
-    title="Inline Frame Example"
-    width="300"
-    height="200"
-    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+
+    <iframe id="inlineFrameExample" title="Inline Frame Example" width="300" height="200"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
     </iframe>
-    
-    <iframe id="inlineFrameExample"
-    title="Inline Frame Example"
-    width="300"
-    height="200"
-    src="http://127.0.0.1:8050/">
+
+    <iframe id="inlineFrameExample" title="Inline Frame Example" width="300" height="200" src="http://127.0.0.1:8050/">
     </iframe>
-    
-          
+
+
     <iframe src="./assets/graph/plotly_graph.html"></iframe>
- 
 
 
-    </main>
-  </body>
+
+  </main>
+</body>
+
 </html>
