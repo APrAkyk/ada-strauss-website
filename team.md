@@ -2,4 +2,4 @@
 layout: default
 ---
 
-#Team
+**Team**
