@@ -94,7 +94,7 @@ For example Trump’s tweet had a score of :
 It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a better idea of what toxicity score is associated with what type of sentence, we’re introducing the monkey scale:
 (scale of the monkey sequences and the corresponding monkey sentences)
 
-<details>
+<details open="open">
 <summary>Toxicity of 'The monkey makes jokes' </summary>
 
 <table class="tb" id="members">
