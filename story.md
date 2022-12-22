@@ -103,16 +103,37 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 (scale of the monkey sequences and the corresponding monkey sentences)
 
 <details>
-<summary>>Toxicity of 'The monkey makes jokes' </summary>
+<summary>>Toxicity of '_The monkey makes jokes_' </summary>
+
 | Toxicity        | Severe toxicity  | Obscene  | Identity attack |  Insult  | Threat   | Sexual explicit |
 |:----------------|:-----------------|:---------|:----------------|:---------|:-------- |:----------------|
 |    0.080424	  |     0.000012     | 0.000631 |     0.001699    | 0.045562 | 0.000297	|    0.000416     |
 </details>
+
 <details>
 <summary>>Toxicity of 'The mean monkey makes means jokes about means' </summary>
+
 | Toxicity        | Severe toxicity  | Obscene  | Identity attack |  Insult  | Threat   | Sexual explicit |
 |:----------------|:-----------------|:---------|:----------------|:---------|:-------- |:----------------|
 |    0.158876	  |     0.000014	 | 0.000780 |     0.002192    | 0.123876 | 0.000231	|    0.000387     |
+</details>
+
+<details>
+<summary>>Toxicity of '_The annoying monkey makes annoying jokes about means_',
+'The vile monkey makes vile jokes about means' </summary>
+
+| Toxicity        | Severe toxicity  | Obscene  | Identity attack |  Insult  | Threat   | Sexual explicit |
+|:----------------|:-----------------|:---------|:----------------|:---------|:-------- |:----------------|
+|    0.197954	  |     0.000018	 | 0.001104 |     0.002104    | 0.139986 | 0.000289	|    0.000623     |
+</details>
+
+<details>
+<summary>>Toxicity of '_The annoying monkey makes annoying jokes about means_',
+'The vile monkey makes vile jokes about means' </summary>
+
+| Toxicity        | Severe toxicity  | Obscene  | Identity attack |  Insult  | Threat   | Sexual explicit |
+|:----------------|:-----------------|:---------|:----------------|:---------|:-------- |:----------------|
+|    0.197954	  |     0.000018	 | 0.001104 |     0.002104    | 0.139986 | 0.000289	|    0.000623     |
 </details>
 
 
