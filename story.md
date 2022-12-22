@@ -24,11 +24,7 @@ To study far-right wing channels on Youtube, our study will be based on the data
     </tr>
 </table>
 
-<details>
-<summary>How do I dropdown? </summary>
 
-This is how you dropdown.
-</details>
 
 <label for="pet-select">Choose a pet:</label>
 <select name="pets" id="pet-select">
@@ -106,7 +102,18 @@ For example Trump’s tweet had a score of :
 It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a better idea of what toxicity score is associated with what type of sentence, we’re introducing the monkey scale:
 (scale of the monkey sequences and the corresponding monkey sentences)
 
-
+<details>
+<summary>>Toxicity of 'The monkey makes jokes' </summary>
+| Toxicity        | Severe toxicity  | Obscene  | Identity attack |  Insult  | Threat   | Sexual explicit |
+|:----------------|:-----------------|:---------|:----------------|:---------|:-------- |:----------------|
+|    0.080424	  |     0.000012     | 0.000631 |     0.001699    | 0.045562 | 0.000297	|    0.000416     |
+</details>
+<details>
+<summary>>Toxicity of 'The mean monkey makes means jokes about means' </summary>
+| Toxicity        | Severe toxicity  | Obscene  | Identity attack |  Insult  | Threat   | Sexual explicit |
+|:----------------|:-----------------|:---------|:----------------|:---------|:-------- |:----------------|
+|    0.158876	  |     0.000014	 | 0.000780 |     0.002192    | 0.123876 | 0.000231	|    0.000387     |
+</details>
 
 
 
