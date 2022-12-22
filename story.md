@@ -56,13 +56,19 @@ To study far-right wing channels on Youtube, our study will be based on the data
 ```
 ## Process
 
-![Stay toxic](https://www.selfies.com/wp-content/uploads/sites/5/2022/07/Mutausbrueche-TikTok-Stay-Toxic.jpg)()
-[source](https://www.selfies.com/apps/instagram/stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/)
+![Stay toxic](https://www.selfies.com/wp-content/uploads/sites/5/2022/07/Mutausbrueche-TikTok-Stay-Toxic.jpg)
+<p align="center">
+    <img width="200" src="https://www.selfies.com/wp-content/uploads/sites/5/2022/07/Mutausbrueche-TikTok-Stay-Toxic.jpg" >
+</p>
 
-![Toxic waste](http://img.picturequotes.com/2/428/427713/have-you-been-playing-in-toxic-waste-lately-quote-1.jpg)(http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713)
+[source](https://www.selfies.com/apps/instagram/
+stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/)
+
+![Toxic waste](http://img.picturequotes.com/2/428/427713/have-you-been-playing-in-toxic-waste-lately-quote-1.jpg)
+[source][http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713)
 
 ![Toxic behaviour](/assets/img/toxic_behaviour.png)
-[source](https://twitter.com/realDonaldTrump/status/332308211321425920)(https://www.pinterest.fr/pin/551761391849970879/)
+[source](https://www.pinterest.fr/pin/551761391849970879/)
 
 ## Introduction
 
