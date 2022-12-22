@@ -1,284 +1,168 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: " en-US" }}">
-<head>
-  <meta charset="UTF-8">
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    
   {% seo %}
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style"
-    type="text/css" crossorigin>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="black">
-  <meta name="apple-mobile-web-app-status-bar-style" content="white">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  {% include head-custom.html %}
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
   <style>
-  table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
+  html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .title {
+    color: grey;
+  }
+
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
     width: 100%;
   }
 
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }</style>
+  .button:hover {
+    background-color: #555;
+  }
+  </style>
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-  <style></style>
-</head>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      {% if site.github.is_project_page %}
+        <a href="https://github.com/epfl-ada/ada-2022-project-strauss" class="btn">Project github</a>
+      {% endif %}
+      {% if site.show_downloads %}
+        <a href="https://aprakyk.github.io/ada-strauss-website/Homepage" class="btn">Home</a>
+        <a href="https://aprakyk.github.io/ada-strauss-website/story" class="btn">Data story</a>
+        <a href="https://aprakyk.github.io/ada-strauss-website/thanks" class="btn">Acknowledgment  & Credentials</a>
+        <a href="https://aprakyk.github.io/ada-strauss-website/team" class="btn">Team</a>
+      {% endif %}
+    </header>
 
-<body>
-  <a id="skip-to-content" href="#content">Skip to the content.</a>
-  <header class="page-header" role="banner">
-    <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-    <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline
-      }}</h2>
-    {% if site.github.is_project_page %}
-    <a href="https://github.com/epfl-ada/ada-2022-project-strauss" class="btn">Project github</a>
-    {% endif %}
-    {% if site.show_downloads %}
-    <a href="https://aprakyk.github.io/ada-strauss-website/Homepage" class="btn">Home</a>
-    <a href="https://aprakyk.github.io/ada-strauss-website/story" class="btn">Data story</a>
-    <a href="https://aprakyk.github.io/ada-strauss-website/thanks" class="btn">Acknowledgment & Credentials</a>
-    <a href="https://aprakyk.github.io/ada-strauss-website/team" class="btn">Team</a>
-    {% endif %}
-  </header>
-<h1>Toxicity</h1>
-<h2>How to measure toxicity ?</h2>
-<p><a href="https://github.com/unitaryai/detoxify"><i>Detoxify</i></a>is a machine learning 
-model which rates the toxicity of a comment on a scale from 0 to 1 (0 not at all, 1 very much). 
-Furthermore, it detects if it fits into these subcategories of toxicity: 
-<b>severe_toxicity</b>, <b>obscene</b>, <b>identity_attack</b>, <b>insult</b>, <b>threat</b>,
- <b>sexual_explicit</b>. 
-A comment is rated 1 in toxicity if it is a very 
-<i>‘hateful, aggressive, or disrespectful that is very likely to make you leave a 
-  discussion or give up on sharing your perspective’</i>.</p>
-<h2>Process</h2>
-<p align="center">
-  <img width="500" src="https://www.selfies.com/wp-content/uploads/sites/5/2022/07/Mutausbrueche-TikTok-Stay-Toxic.jpg" >
-</p>
-<p align="center">
-  <a href="https://www.selfies.com/apps/instagram/
-stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Source</a>
-</p>
-<p align="center">
-  <img width="300" src="http://img.picturequotes.com/2/428/427713/have-you-been-playing-in-toxic-waste-lately-quote-1.jpg" >
-</p>
-<p align="center">
-  <a href="http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713">Source</a>
-</p>
-<p align="center">
-  <img width="500" src="assets/img/toxic_behaviour.png" >
-</p>
-<p align="center">
-  <a href="https://www.pinterest.fr/pin/551761391849970879/">Source</a>
-</p>
-<h2>Introduction</h2>
-<p>Some extreme communities are well known for making toxic comments. Taking Trump for example:</p>
-<p align="center">
-  <img width="500" src="assets/img/trump.png" >
-</p>
-<p align="center">
-  <a href="https://twitter.com/realDonaldTrump/status/332308211321425920">Twitter</a>
-</p>
-<p>But how toxic is that tweet? Thankfully, we’re using a Machine Learning model called Detoxify to compute how toxic a sentence is and how severe-toxic, obscene, threatening, sexually explicit, identity attacking  and threatening it is. It rates it on a scale from 0 to 1 (0 not at all, 1 very). To get an idea, a comment is considered to have a toxicity of 1 if if it is a very ‘hateful, aggressive, or disrespectful that is very likely to make you leave a discussion or give up on sharing your perspective’. 
-  For example Trump’s tweet had a score of :</p>
-  <table class="tb" id="members">
-    <tr>
-      <th>Toxicity</th>
-      <th>Severe toxicity</th>
-      <th>Obscene</th>
-      <th>Identity attack</th>
-      <th>Insult</th>
-      <th>Threat</th>
-      <th>Sexual explicit</th>
-    </tr>
-    <tr>
-      <th>0.994145</th>
-      <th>0.000396</th>
-      <th>0.004734</th>
-      <th>0.004734</th>
-      <th>0.988292</th>
-      <th>0.000295</th>
-      <th>0.000622</th>
-    </tr>
-  </table>
-  
-  <p>It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a better idea of what toxicity score is associated with what type of sentence, we’re introducing the monkey scale:
-    (scale of the monkey sequences and the corresponding monkey sentences)</p>
+    <main id="content" class="main-content" role="main">
+      <h2>Meet The Team of the Strauss project</h2>
 
-    <div class="chartMenu">
-    </div>
-    <div class="chartCard">
-      <div class="chartBox">
-        <canvas id="myChart"></canvas>
+      <P>While others meet for a good beer late at night, our first meeting was at a Strauss concert. 
+        For all the inspiration his music has given us, we decided to name our project after him.</P>
+    
+      <p align="center" style="color :BurlyWood; ">
+          <i>“Ideas, like young wine, should be put in storage and taken up again only after they have been allowed to ferment and to ripen”<i>
+      </p>
+      
+      <p align="right " style="color :cadetblue; ">
+          - Richard Strauss
+      </p>
+      
+      <p align="center" style="color :BurlyWood; ">
+          <i>“Music expresses that which cannot be put into words and that which cannot remain silent”<i>
+      </p>
+
+      <p align="right " style="color :cadetblue; ">
+          - Victor Hugo
+      </p>
+      <br>
+
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="/w3images/team1.jpg" alt="Bartul" style="width:100%">
+            <div class="container">
+              <h2>Bartul Kovacic</h2>
+              <p class="title">C expert & cluster expert 1</p>
+              <p>Our expert in c who process the large amounts of data of the YouNiverse dataset</p>
+              <p>Mail : bartul.kovacic@epfl.ch</p>
+              <p><button class="button"><a href="https://github.com/BKova">Github</a></button><p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="assets/img/profilArmelle.png" alt="Armelle" style="width:100%">
+            <div class="container">
+              <h2>Armelle Hours</h2>
+              <p class="title">Toxicity expert 1</p>
+              <p>Study the toxicity of the comments in far-right channels</p>
+              <p>Mail : armelle.hours@epfl.ch</p>
+              <p><button class="button"><a href="https://github.com/Armelle-h">Github</a></button><p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <img src="assets/img/profilAnya.png" alt="Anya" style="width:100%">
+            <div class="container">
+              <h2>Anya-Aurore Mauron</h2>
+              <p class="title">Toxicity expert 1</p>
+              <p>Study the toxicity of the comments in far-right channels</p>
+              <p>Mail : Anya-aurore.mauron@epfl.ch</p>
+              <p><button class="button"><a href="https://github.com/Aurenore">Github</a></button><p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="assets/img/profilAriane.png" alt="Ariane" style="width:100%">
+            <div class="container">
+              <h2>Ariane Priou</h2>
+              <p class="title">Website creator & cluster expert 2</p>
+              <p>Creator of the website</p>
+              <p>Mail : ariane.priou@epfl.ch</p>
+              <p><button class="button"><a href="https://github.com/APrAkyk">Github</a></button><p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-    // setup 
-    const data = {
-      labels: ['The monkey makes jokes', 'The mean monkey makes means jokes about means', 'The annoying monkey makes annoying jokes about means',
-'The vile monkey makes vile jokes about means', 'The malevolent monkey makes malevolent jokes about means', 
-'The nasty monkey makes nasty jokes about means', 'The despicable monkey makes despicable jokes about means', 
-'The bastard monkey makes bastard jokes about means'],
-      datasets: [{
-        label: 'Toxicity',
-        data: [0.080424, 0.158876, 0.197954, 0.319232, 0.462587, 0.615834, 0.707401, 0.995640],
-        backgroundColor: ['rgba(255, 26, 104, 0.2)',],
-        borderColor: ['rgba(255, 26, 104, 1)',],
-        borderWidth: 1
-      }]
-    };
-    // config 
-    const config = {
-      type: 'bar',
-      data,
-      options: {
-        plugins : {
-          legend : {
-            display : false
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    };
-    
-    // render init block
-    const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-    );
-</script>
 
-<h1>BROUILLON : IGNORE</h1>
-  <main id="content" class="main-content" role="main">
-    <label for="select_image">Select an image</label>
-    <select name="image-select" id="image-select">
-      <option value="graph1">graph1</option>
-      <option value="graph2">graph2</option>
-      <option value="graph3">graph3</option>
-      <option value="graph4">graph4</option>
-      <option value="graph5">graph5</option>
-      <option value="graph6">graph6</option>
-    </select>
-    <label for="graph_input_1">Option 1</label>
-    <input id="graph_input_1" type="checkbox" checked>
-    <label for="graph_input_2">Option 2</label>
-    <input id="graph_input_2" type="checkbox" checked>
-    <label for="graph_input_3">Option 3</label>
-    <input id="graph_input_3" type="checkbox" checked>
-    <label for="graph_input_4">Option 4</label>
-    <input id="graph_input_4" type="checkbox" checked>
-    <img id="graphique-1" src="../assets/img/profilAriane.png" />
-    <script>
-      const selectEl = document.getElementById("image-select");
-      selectEl.addEventListener("change", updateImage);
-      document.getElementById("graph_input_1").addEventListener("change", updateImage)
-      document.getElementById("graph_input_2").addEventListener("change", updateImage)
-      document.getElementById("graph_input_3").addEventListener("change", updateImage)
-      document.getElementById("graph_input_4").addEventListener("change", updateImage)
-      function updateImage() {
-        const noGraphique = parseInt(selectEl.value[5]);
-        const checked1 = document.getElementById("graph_input_1").checked ? "1" : "0";
-        const checked2 = document.getElementById("graph_input_2").checked ? "1" : "0";
-        const checked3 = document.getElementById("graph_input_3").checked ? "1" : "0";
-        const checked4 = document.getElementById("graph_input_4").checked ? "1" : "0";
-        console.log(`../assets/img/graphique-${noGraphique}-${checked1}${checked2}${checked3}${checked4}.png`);
-        // graphique-3-0110.png
-        document.getElementById("graphique-1").src = `../assets/img/graphique-${noGraphique}-${checked1}${checked2}${checked3}${checked4}.png`
-      } 
-    </script>
-  <p>Graph</p>
-  <script>
-    var xValues = [100,200,300,400,500,600,700,800,900,1000];
-    new Chart("myChart", {
-      type: "line",
-      data: {
-        labels: xValues,
-        datasets: 
-        [
-          { 
-          data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
-          borderColor: "red",
-          fill: false
-          }, 
-          { 
-          data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
-          borderColor: "green",
-          fill: false
-          }, 
-          { 
-          data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
-          borderColor: "blue",
-          fill: false
-          }
-        ]
-      },
-      options: {
-        legend: {display: false}
-      }
-    });
-  </script>
-  
-  <p>Chart</p> 
-    <div class="chartMenu">
-      <p>Hello</p>
-    </div>
-    <div class="chartCard">
-      <div class="chartBox">
-        <canvas id="myChart"></canvas>
-      </div>
-    </div>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-    // setup 
-    const data = {
-      labels: ['The monkey makes jokes', 'The mean monkey makes means jokes about means', 'The annoying monkey makes annoying jokes about means',
-'The vile monkey makes vile jokes about means', 'The malevolent monkey makes malevolent jokes about means', 
-'The nasty monkey makes nasty jokes about means', 'The despicable monkey makes despicable jokes about means', 
-'The bastard monkey makes bastard jokes about means'],
-      datasets: [{
-        label: 'Toxicity',
-        data: [0.080424, 0.158876, 0.197954, 0.319232, 0.462587, 0.615834, 0.707401, 0.995640],
-        backgroundColor: ['rgba(255, 26, 104, 0.2)',],
-        borderColor: ['rgba(255, 26, 104, 1)',],
-        borderWidth: 1
-      },{
-        label: 'Severe toxicity',
-        data: [0.000012, 0.000014 , 0.000018, 0.000017, 0.000031, 0.000024, 0.000016, 0.032880],
-        backgroundColor: ['rgba(255, 26, 104, 0.2)',],
-        borderColor: ['rgba(255, 26, 104, 1)',],
-        borderWidth: 1
-      }]
-    };
-    // config 
-    const config = {
-      type: 'bar',
-      data,
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    };
-    
-    // render init block
-    const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-    );
-    </script>
-    
-  </main>
-</body>
-<div id="divpage"><center><iframe src="assets/graph/Each_cat_tox/identity_attack.html" height = "500", 
-  width = "1000" frameBorder="0"> </iframe></center></div>
+    </main>
+  </body>
 </html>
