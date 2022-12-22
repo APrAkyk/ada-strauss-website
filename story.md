@@ -105,6 +105,25 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 <details>
 <summary>>Toxicity of '_The monkey makes jokes_' </summary>
 
+<table class="tb" id="members">
+  <tr>
+    <th>Toxicity</th>
+    <th>Severe toxicity</th>
+  </tr>
+  <tr>
+    <td>Denice</td>
+    <td>Hobermann</td>
+  </tr>
+  <tr>
+    <td>Paulo</td>
+    <td>Cornell</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Hollander</td>
+  </tr>
+</table>
+
 | Toxicity        | Severe toxicity  | Obscene  | Identity attack |  Insult  | Threat   | Sexual explicit |
 |:----------------|:-----------------|:---------|:----------------|:---------|:-------- |:----------------|
 |    0.080424	  |     0.000012     | 0.000631 |     0.001699    | 0.045562 | 0.000297	|    0.000416     |
