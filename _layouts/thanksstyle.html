@@ -12,18 +12,6 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
 
-    <style>
-      table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-      }
-    
-      td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-      }</style>
     
   </head>
 
@@ -31,6 +19,7 @@
 
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
+
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
@@ -44,44 +33,7 @@
         <a href="https://aprakyk.github.io/ada-strauss-website/team" class="btn">Team</a>
       {% endif %}
     </header>
+  <p>hello</p>
 
-    <h1>Toxicity</h1>
-    <h2>How to measure toxicity ?</h2>
-    <p><a href="https://github.com/unitaryai/detoxify"><i>Detoxify</i></a>is a machine learning 
-    model which rates the toxicity of a comment on a scale from 0 to 1 (0 not at all, 1 very much). 
-    Furthermore, it detects if it fits into these subcategories of toxicity: 
-    <b>severe_toxicity</b>, <b>obscene</b>, <b>identity_attack</b>, <b>insult</b>, <b>threat</b>,
-     <b>sexual_explicit</b>. 
-    A comment is rated 1 in toxicity if it is a very 
-    <i>‘hateful, aggressive, or disrespectful that is very likely to make you leave a 
-      discussion or give up on sharing your perspective’</i>.</p>
-    <h2>Process</h2>
-    <p align="center">
-      <img width="500" src="https://www.selfies.com/wp-content/uploads/sites/5/2022/07/Mutausbrueche-TikTok-Stay-Toxic.jpg" >
-    </p>
-    <p align="center">
-      <a href="https://www.selfies.com/apps/instagram/
-    stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Source</a>
-    </p>
-    <p align="center">
-      <img width="300" src="http://img.picturequotes.com/2/428/427713/have-you-been-playing-in-toxic-waste-lately-quote-1.jpg" >
-    </p>
-    <p align="center">
-      <a href="http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713">Source</a>
-    </p>
-    <p align="center">
-      <img width="500" src="assets/img/toxic_behaviour.png" >
-    </p>
-    <p align="center">
-      <a href="https://www.pinterest.fr/pin/551761391849970879/">Source</a>
-    </p>
-    <h2>Introduction</h2>
-    <p>Some extreme communities are well known for making toxic comments. Taking Trump for example:</p>
-    <p align="center">
-      <img width="500" src="assets/img/trump.png" >
-    </p>
-    <p align="center">
-      <a href="https://twitter.com/realDonaldTrump/status/332308211321425920">Twitter</a>
-    </p>
   </body>
 </html>
