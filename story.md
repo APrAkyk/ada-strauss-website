@@ -108,6 +108,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 | Toxicity        | Severe toxicity  | Obscene  | Identity attack |  Insult  | Threat   | Sexual explicit |
 |:----------------|:-----------------|:---------|:----------------|:---------|:-------- |:----------------|
 |    0.080424	  |     0.000012     | 0.000631 |     0.001699    | 0.045562 | 0.000297	|    0.000416     |
+
 </details>
 
 <details>
@@ -134,6 +135,15 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 | Toxicity        | Severe toxicity  | Obscene  | Identity attack |  Insult  | Threat   | Sexual explicit |
 |:----------------|:-----------------|:---------|:----------------|:---------|:-------- |:----------------|
 |    0.197954	  |     0.000018	 | 0.001104 |     0.002104    | 0.139986 | 0.000289	|    0.000623     |
+</details>
+
+<details>
+<summary>>Toxicity of '_The malevolent monkey makes malevolent jokes about means_',
+'The vile monkey makes vile jokes about means' </summary>
+
+| Toxicity        | Severe toxicity  | Obscene  | Identity attack |  Insult  | Threat   | Sexual explicit |
+|:----------------|:-----------------|:---------|:----------------|:---------|:-------- |:----------------|
+|    0.319232	  |     0.000017	 | 0.000790 |     0.002627    | 0.259821 | 0.000322	|    0.000463     |
 </details>
 
 
