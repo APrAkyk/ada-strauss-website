@@ -30,6 +30,8 @@ Paper used to calculate the local clustering coefficient computing for the clust
 
 We use a server to be able compute of the large amount of data from the YouNiverse dataset : [Server](https://www.vultr.com/)
 
+Machine learning model which rates the toxicity : [Detoxify](https://github.com/unitaryai/detoxify)
+
 <p align="center" style="color :BurlyWood; ">
     <i>“The wise man doesn't give the right answers, he poses the right questions”<i>
 
