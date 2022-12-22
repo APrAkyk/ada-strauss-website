@@ -129,7 +129,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 </details>
 
 <details>
-<summary>Toxicity of <i>'The mean monkey makes means jokes about means'<i> </summary>
+<summary>Toxicity of 'The mean monkey makes means jokes about means' </summary>
 
 <table class="tb" id="members">
   <tr>
@@ -155,7 +155,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 </details>
 
 <details>
-<summary>Toxicity of <i>'The annoying monkey makes annoying jokes about means'<i></summary>
+<summary>Toxicity of 'The annoying monkey makes annoying jokes about means'</summary>
 
 <table class="tb" id="members">
   <tr>
@@ -181,7 +181,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 </details>
 
 <details>
-<summary>Toxicity of <i>'The vile monkey makes vile jokes about means'<i> </summary>
+<summary>Toxicity of 'The vile monkey makes vile jokes about means' </summary>
 
 <table class="tb" id="members">
   <tr>
@@ -206,7 +206,103 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 
 </details>
 
+<details>
+<summary>Toxicity of 'The malevolent monkey makes malevolent jokes about means' </summary>
+
+<table class="tb" id="members">
+  <tr>
+    <th>Toxicity</th>
+    <th>Severe toxicity</th>
+    <th>Obscene</th>
+    <th>Identity attack</th>
+    <th>Insult</th>
+    <th>Threat</th>
+    <th>Sexual explicit</th>
+  </tr>
+  <tr>
+    <th>0.462587</th>
+    <th>0.000031</th>
+    <th>0.001146</th>
+    <th>0.003987</th>
+    <th>0.397109</th>
+    <th>0.000386</th>
+    <th>0.000831</th>
+  </tr>
+</table>
+
 </details>
+
+<details>
+<summary>Toxicity of 'The nasty monkey makes nasty jokes about means' </summary>
+
+<table class="tb" id="members">
+  <tr>
+    <th>Toxicity</th>
+    <th>Severe toxicity</th>
+    <th>Obscene</th>
+    <th>Identity attack</th>
+    <th>Insult</th>
+    <th>Threat</th>
+    <th>Sexual explicit</th>
+  </tr>
+  <tr>
+    <th>0.615834</th>
+    <th>0.000024</th>
+    <th>0.000813</th>
+    <th>0.002809</th>
+    <th>0.556885</th>
+    <th>0.000381</th>
+    <th>0.000466</th>
+  </tr>
+</table>
+
+<details>
+<summary>Toxicity of 'The despicable monkey makes despicable jokes about means' </summary>
+
+<table class="tb" id="members">
+  <tr>
+    <th>Toxicity</th>
+    <th>Severe toxicity</th>
+    <th>Obscene</th>
+    <th>Identity attack</th>
+    <th>Insult</th>
+    <th>Threat</th>
+    <th>Sexual explicit</th>
+  </tr>
+  <tr>
+    <th>0.707401</th>
+    <th>0.000016</th>
+    <th>0.000449</th>
+    <th>0.001647</th>
+    <th>0.657305</th>
+    <th>0.000226</th>
+    <th>0.000282</th>
+  </tr>
+</table>
+
+<details>
+<summary>Toxicity of 'The bastard monkey makes bastard jokes about means' </summary>
+
+<table class="tb" id="members">
+  <tr>
+    <th>Toxicity</th>
+    <th>Severe toxicity</th>
+    <th>Obscene</th>
+    <th>Identity attack</th>
+    <th>Insult</th>
+    <th>Threat</th>
+    <th>Sexual explicit</th>
+  </tr>
+  <tr>
+    <th>0.995640</th>
+    <th>0.032880</th>
+    <th>0.883254</th>
+    <th>0.030733</th>
+    <th>0.975668</th>
+    <th>0.000906</th>
+    <th>0.028742</th>
+  </tr>
+</table>
 
 
 
