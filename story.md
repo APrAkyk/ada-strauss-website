@@ -297,6 +297,39 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 
 Therefore we wondered if being toxic was one of the characteristic features of extreme communities. Just as in the study [“Auditing Radicalization Pathways on Youtube”, by Ribeiro et al. (2020)](https://dlab.epfl.ch/people/west/pub/HortaRibeiro-Ottoni-West-Almeida-Meira_FAT-20.pdf), we decided to study the extreme communities ‘Alt-right’, ‘Alt-left’ and ‘Intellectual Dark Web’ aka I.D.W and use medias as our control group. And hopefully twitter isn’t the only place where you can be toxic, there is also the comment section of youtube videos. 
 
+```chart
+{
+  "type": "pie",
+  "data": {
+    "labels": [
+      "Red",
+      "Blue",
+      "Yellow"
+    ],
+    "datasets": [
+      {
+        "data": [
+          300,
+          50,
+          100
+        ],
+        "backgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
+        ],
+        "hoverBackgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
+        ]
+      }
+    ]
+  },
+  "options": {}
+}
+```
+
 
   <p>Chart</p> 
     <div class="chartMenu">
