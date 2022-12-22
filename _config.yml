@@ -7,7 +7,7 @@ navigation:
     url: Homepage
   - title: Data Story
     url: story
-  - title: Thanks & Credentials
+  - title: Acknowledgment & Credentials
     url: thanks
   - title: Team
     url: team

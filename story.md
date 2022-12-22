@@ -302,16 +302,8 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 </table>
 </details>
 
-<body>
 
-<h1>The details and summary elements + CSS</h1>
-
-<details>
-  <summary><i>Epcot Center<i></summary>
-  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-</details>
-
-</body>
+Therefore we wondered if being toxic was one of the characteristic features of extreme communities. Just as in the study [“Auditing Radicalization Pathways on Youtube”, by Ribeiro et al. (2020)](https://dlab.epfl.ch/people/west/pub/HortaRibeiro-Ottoni-West-Almeida-Meira_FAT-20.pdf), we decided to study the extreme communities ‘Alt-right’, ‘Alt-left’ and ‘Intellectual Dark Web’ aka I.D.W and use medias as our control group. And hopefully twitter isn’t the only place where you can be toxic, there is also the comment section of youtube videos. 
 
 
 
