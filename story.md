@@ -352,7 +352,7 @@ Therefore we wondered if being toxic was one of the characteristic features of e
     );
 
     </script>
-
+<div id="divpage"><center><iframe src="assets/graph/Each_cat_tox/identity_attack.html height = "500", width = "1000" frameBorder="0"> </iframe></center></div>
 
 
 
