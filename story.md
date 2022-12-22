@@ -64,14 +64,16 @@ To study far-right wing channels on Youtube, our study will be based on the data
 stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/)
 
 <p align="center">
-    <img width="500" src="http://img.picturequotes.com/2/428/427713/have-you-been-playing-in-toxic-waste-lately-quote-1.jpg" >
+    <img width="300" src="http://img.picturequotes.com/2/428/427713/have-you-been-playing-in-toxic-waste-lately-quote-1.jpg" >
 </p>
+
 [source][http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713)
 
 
 <p align="center">
     <img width="500" src="../assets/img/toxic_behaviour.png" >
 </p>
+
 [source](https://www.pinterest.fr/pin/551761391849970879/)
 
 ## Introduction
@@ -80,7 +82,9 @@ Some extreme communities are well known for making toxic comments. Taking Trump 
 
 <p align="center">
     <img width="500" src="../assets/img/trump.png" >
-</p>[twitter](https://twitter.com/realDonaldTrump/status/332308211321425920)
+</p>
+
+[twitter](https://twitter.com/realDonaldTrump/status/332308211321425920)
 
 But how toxic is that tweet? Thankfully, we’re using a Machine Learning model called Detoxify to compute how toxic a sentence is and how severe-toxic, obscene, threatening, sexually explicit, identity attacking  and threatening it is. It rates it on a scale from 0 to 1 (0 not at all, 1 very). To get an idea, a comment is considered to have a toxicity of 1 if if it is a very ‘hateful, aggressive, or disrespectful that is very likely to make you leave a discussion or give up on sharing your perspective’. 
 For example Trump’s tweet had a score of :
