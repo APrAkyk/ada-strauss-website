@@ -14,6 +14,20 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   {% include head-custom.html %}
 
+  <style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }</style>
+
+  <style></style>
 </head>
 
 <body>
@@ -43,8 +57,124 @@ Furthermore, it detects if it fits into these subcategories of toxicity:
 <b>severe_toxicity</b>, <b>obscene</b>, <b>identity_attack</b>, <b>insult</b>, <b>threat</b>,
  <b>sexual_explicit</b>. 
 A comment is rated 1 in toxicity if it is a very 
-‘hateful, aggressive, or disrespectful that is very likely to make you leave a 
-discussion or give up on sharing your perspective’.</p>
+<i>‘hateful, aggressive, or disrespectful that is very likely to make you leave a 
+  discussion or give up on sharing your perspective’</i>.</p>
+
+<h2>Process</h2>
+
+<p align="center">
+  <img width="500" src="https://www.selfies.com/wp-content/uploads/sites/5/2022/07/Mutausbrueche-TikTok-Stay-Toxic.jpg" >
+</p>
+<p align="center">
+  <a href="https://www.selfies.com/apps/instagram/
+stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Source</a>
+</p>
+
+<p align="center">
+  <img width="300" src="http://img.picturequotes.com/2/428/427713/have-you-been-playing-in-toxic-waste-lately-quote-1.jpg" >
+</p>
+
+<p align="center">
+  <a href="http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713">Source</a>
+</p>
+
+<p align="center">
+  <img width="500" src="assets/img/toxic_behaviour.png" >
+</p>
+
+<p align="center">
+  <a href="https://www.pinterest.fr/pin/551761391849970879/">Source</a>
+</p>
+
+<h2>Introduction</h2>
+
+<p>Some extreme communities are well known for making toxic comments. Taking Trump for example:</p>
+
+<p align="center">
+  <img width="500" src="assets/img/trump.png" >
+</p>
+
+<p align="center">
+  <a href="https://twitter.com/realDonaldTrump/status/332308211321425920">Twitter</a>
+</p>
+
+<p>But how toxic is that tweet? Thankfully, we’re using a Machine Learning model called Detoxify to compute how toxic a sentence is and how severe-toxic, obscene, threatening, sexually explicit, identity attacking  and threatening it is. It rates it on a scale from 0 to 1 (0 not at all, 1 very). To get an idea, a comment is considered to have a toxicity of 1 if if it is a very ‘hateful, aggressive, or disrespectful that is very likely to make you leave a discussion or give up on sharing your perspective’. 
+  For example Trump’s tweet had a score of :</p>
+
+  <table class="tb" id="members">
+    <tr>
+      <th>Toxicity</th>
+      <th>Severe toxicity</th>
+      <th>Obscene</th>
+      <th>Identity attack</th>
+      <th>Insult</th>
+      <th>Threat</th>
+      <th>Sexual explicit</th>
+    </tr>
+    <tr>
+      <th>0.994145</th>
+      <th>0.000396</th>
+      <th>0.004734</th>
+      <th>0.004734</th>
+      <th>0.988292</th>
+      <th>0.000295</th>
+      <th>0.000622</th>
+    </tr>
+  </table>
+  
+  <p>It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a better idea of what toxicity score is associated with what type of sentence, we’re introducing the monkey scale:
+    (scale of the monkey sequences and the corresponding monkey sentences)</p>
+
+    <div class="chartMenu">
+    </div>
+    <div class="chartCard">
+      <div class="chartBox">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    // setup 
+    const data = {
+      labels: ['The monkey makes jokes', 'The mean monkey makes means jokes about means', 'The annoying monkey makes annoying jokes about means',
+'The vile monkey makes vile jokes about means', 'The malevolent monkey makes malevolent jokes about means', 
+'The nasty monkey makes nasty jokes about means', 'The despicable monkey makes despicable jokes about means', 
+'The bastard monkey makes bastard jokes about means'],
+      datasets: [{
+        label: 'Toxicity',
+        data: [0.080424, 0.158876, 0.197954, 0.319232, 0.462587, 0.615834, 0.707401, 0.995640],
+        backgroundColor: ['rgba(255, 26, 104, 0.2)',],
+        borderColor: ['rgba(255, 26, 104, 1)',],
+        borderWidth: 1
+      }]
+    };
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        plugins : {
+          legend : {
+            display : false
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+</script>
 
 
 
@@ -52,8 +182,7 @@ discussion or give up on sharing your perspective’.</p>
 
 
 
-
-
+<h1>BROUILLON : IGNORE</h1>
 
 
   <main id="content" class="main-content" role="main">
