@@ -24,9 +24,13 @@ To study far-right wing channels on Youtube, our study will be based on the data
     </tr>
 </table>
 
-```js
-<label for="pet-select">Choose a pet:</label>
+<details>
+<summary>How do I dropdown?</summary>
+<br>
+This is how you dropdown.
+</details>
 
+<label for="pet-select">Choose a pet:</label>
 <select name="pets" id="pet-select">
     <option value="">--Please choose an option--</option>
     <option value="dog">Dog</option>
@@ -38,7 +42,6 @@ To study far-right wing channels on Youtube, our study will be based on the data
 <script>
     const selectEl = document.getElementById("pet-select");
     selectEl.addEventListener("change", (ev) => {
-    console.log("yoooo")
     switch (selectEl.value) {
         case "dog":
         document.getElementById("graphique-1").src = "../assets/img/favicon.png";
@@ -52,8 +55,8 @@ To study far-right wing channels on Youtube, our study will be based on the data
         break;
     }
     })
-</script>
-```
+</script\>
+
 ## Process
 
 <p align="center">
