@@ -129,7 +129,7 @@
 'The nasty monkey makes nasty jokes about means', 'The despicable monkey makes despicable jokes about means', 
 'The bastard monkey makes bastard jokes about means'],
       datasets: [{
-        label: 'Weekly Sales',
+        label: 'Toxicity',
         data: [0.080424, 0.158876, 0.197954, 0.319232, 0.462587, 0.615834, 0.707401, 0.995640],
         backgroundColor: ['rgba(255, 26, 104, 0.2)',],
         borderColor: ['rgba(255, 26, 104, 1)',],
@@ -142,6 +142,11 @@
       type: 'bar',
       data,
       options: {
+        plugins : {
+          legend : {
+            display : false
+          }
+        }
         scales: {
           y: {
             beginAtZero: true
