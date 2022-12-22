@@ -13,8 +13,7 @@ To study far-right wing channels on Youtube, our study will be based on the data
 
 
 <p align="center" style="color :BurlyWood; ">
-    <i>“The wise man doesn't give the right answers, he poses the right questions.”<i>
-</p>
+    <i>“The wise man doesn't give the right answers, he poses the right questions”<i>
 
 <p align="right " style="color :cadetblue; ">
     - Claude Levi-Strauss
