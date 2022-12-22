@@ -11,6 +11,7 @@ Doing so, we would like to see if these channels generate more toxic behavior an
 
 To study far-right wing channels on Youtube, our study will be based on the data and the results coming from Ribeiro et al. (2020) study. The studied channels are broadly classified into four types: Media (the control group), the Alt-lite, the Intellectual Dark Web (I.D.W) and the Alt-right. 
 
+
 <p align="center" style="color :BurlyWood; ">
     <i>“The wise man doesn't give the right answers, he poses the right questions”<i>
 </p>
@@ -18,4 +19,3 @@ To study far-right wing channels on Youtube, our study will be based on the data
 <p align="right " style="color :cadetblue; ">
     - Claude Levi-Strauss
 </p>
-
