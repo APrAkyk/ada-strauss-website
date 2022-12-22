@@ -25,8 +25,8 @@ To study far-right wing channels on Youtube, our study will be based on the data
 </table>
 
 <details>
-<summary>How do I dropdown?<< </summary>
-<br>
+<summary>How do I dropdown? </summary>
+
 This is how you dropdown.
 </details>
 
@@ -55,7 +55,7 @@ This is how you dropdown.
         break;
     }
     })
-</script\>
+</script>
 
 ## Process
 
