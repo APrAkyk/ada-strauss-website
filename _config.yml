@@ -11,4 +11,6 @@ navigation:
     url: thanks
   - title: Team
     url: team
+  - title: Example
+    url: example
   
