@@ -11,15 +11,8 @@ Doing so, we would like to see if these channels generate more toxic behavior an
 
 To study far-right wing channels on Youtube, our study will be based on the data and the results coming from Ribeiro et al. (2020) study. The studied channels are broadly classified into four types: Media (the control group), the Alt-lite, the Intellectual Dark Web (I.D.W) and the Alt-right. 
 
-
-<p align="center" style="color :BurlyWood; ">
-    <i>“The wise man doesn't give the right answers, he poses the right questions”<i>
-
-<p align="right " style="color :cadetblue; ">
-    - Claude Levi-Strauss
-</p>
-
 # Acknowledgement 
+
 We would like to thank [Manoel Ribeiro](https://manoelhortaribeiro.github.io/) for helping  his helpful remarks. We were able to successfully complete this project with his help of their guidance and his data that he kindly shared with us. 
 His paper was also very helpful to understant the data we were working on. 
 [YouNiverse: Large-Scale Channel and Video Metadatafrom English-Speaking YouTub](https://ojs.aaai.org/index.php/ICWSM/article/view/18125/17928)
@@ -35,3 +28,11 @@ Paper used to calculate the local clustering coefficient computing for the clust
 [Directed clustering in weighted networks: A new perspective](https://www.sciencedirect.com/science/article/abs/pii/S096007791730509X?via%3Dihub)
 
 We use a server to be able compute of the large amount of data from the YouNiverse dataset : [Server](https://www.vultr.com/)
+
+<p align="center" style="color :BurlyWood; ">
+    <i>“The wise man doesn't give the right answers, he poses the right questions”<i>
+
+<p align="right " style="color :cadetblue; ">
+    - Claude Levi-Strauss
+</p>
+
