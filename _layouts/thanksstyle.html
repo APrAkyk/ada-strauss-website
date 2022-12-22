@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     
-  {% seo %}
+    {% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,64 +11,24 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
-  <style>
-  html {
-    box-sizing: border-box;
-  }
 
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
-  .column {
-    float: left;
-    width: 33.3%;
-    margin-bottom: 16px;
-    padding: 0 8px;
-  }
-
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: block;
-    }
-  }
-
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-
-  .container {
-    padding: 0 16px;
-  }
-
-  .container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  .title {
-    color: grey;
-  }
-
-  .button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-  }
-
-  .button:hover {
-    background-color: #555;
-  }
-  </style>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+    
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }</style>
+    
   </head>
+
+
+
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
@@ -86,83 +46,5 @@
       {% endif %}
     </header>
 
-    <main id="content" class="main-content" role="main">
-      <h2>Meet The Team of the Strauss project</h2>
-
-      <P>While others meet for a good beer late at night, our first meeting was at a Strauss concert. 
-        For all the inspiration his music has given us, we decided to name our project after him.</P>
-    
-      <p align="center" style="color :BurlyWood; ">
-          <i>“Ideas, like young wine, should be put in storage and taken up again only after they have been allowed to ferment and to ripen”<i>
-      </p>
-      
-      <p align="right " style="color :cadetblue; ">
-          - Richard Strauss
-      </p>
-      
-      <p align="center" style="color :BurlyWood; ">
-          <i>“Music expresses that which cannot be put into words and that which cannot remain silent”<i>
-      </p>
-
-      <p align="right " style="color :cadetblue; ">
-          - Victor Hugo
-      </p>
-      <br>
-
-      <div class="row">
-        <div class="column">
-          <div class="card">
-            <img src="/w3images/team1.jpg" alt="Bartul" style="width:100%">
-            <div class="container">
-              <h2>Bartul Kovacic</h2>
-              <p class="title">C expert & cluster expert 1</p>
-              <p>Our expert in c who process the large amounts of data of the YouNiverse dataset</p>
-              <p>Mail : bartul.kovacic@epfl.ch</p>
-              <p><button class="button"><a href="https://github.com/BKova">Github</a></button><p>
-            </div>
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="card">
-            <img src="assets/img/profilArmelle.png" alt="Armelle" style="width:100%">
-            <div class="container">
-              <h2>Armelle Hours</h2>
-              <p class="title">Toxicity expert 1</p>
-              <p>Study the toxicity of the comments in far-right channels</p>
-              <p>Mail : armelle.hours@epfl.ch</p>
-              <p><button class="button"><a href="https://github.com/Armelle-h">Github</a></button><p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="column">
-          <div class="card">
-            <img src="assets/img/profilAnya.png" alt="Anya" style="width:100%">
-            <div class="container">
-              <h2>Anya-Aurore Mauron</h2>
-              <p class="title">Toxicity expert 1</p>
-              <p>Study the toxicity of the comments in far-right channels</p>
-              <p>Mail : Anya-aurore.mauron@epfl.ch</p>
-              <p><button class="button"><a href="https://github.com/Aurenore">Github</a></button><p>
-            </div>
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="card">
-            <img src="assets/img/profilAriane.png" alt="Ariane" style="width:100%">
-            <div class="container">
-              <h2>Ariane Priou</h2>
-              <p class="title">Website creator & cluster expert 2</p>
-              <p>Creator of the website</p>
-              <p>Mail : ariane.priou@epfl.ch</p>
-              <p><button class="button"><a href="https://github.com/APrAkyk">Github</a></button><p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </main>
   </body>
 </html>
