@@ -56,16 +56,20 @@ To study far-right wing channels on Youtube, our study will be based on the data
 ```
 ## Process
 
-![Stay toxic](https://www.selfies.com/wp-content/uploads/sites/5/2022/07/Mutausbrueche-TikTok-Stay-Toxic.jpg)(https://www.selfies.com/apps/instagram/stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/)
+![Stay toxic](https://www.selfies.com/wp-content/uploads/sites/5/2022/07/Mutausbrueche-TikTok-Stay-Toxic.jpg)()
+[source](https://www.selfies.com/apps/instagram/stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/)
 
 ![Toxic waste](http://img.picturequotes.com/2/428/427713/have-you-been-playing-in-toxic-waste-lately-quote-1.jpg)(http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713)
-![Toxic behaviour](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTRdQ4UNZVTZVVoYptj2-eTw0lxloufeA1ny9Lo7Hag4LXNpivwKyKfAOqWj89YKfHoqLHTyVuYsBiWzypuBLYXAFJ349Z6qsaz2LCq3J33JSYPp=s783)(https://twitter.com/realDonaldTrump/status/332308211321425920)(https://www.pinterest.fr/pin/551761391849970879/)
+
+![Toxic behaviour](/assets/img/toxic_behaviour.png)
+[source](https://twitter.com/realDonaldTrump/status/332308211321425920)(https://www.pinterest.fr/pin/551761391849970879/)
 
 ## Introduction
 
 Some extreme communities are well known for making toxic comments. Taking Trump for example:
 
-![Twitter trump](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTT-P10hHApDunFU3bhhlcGdXaF3sauoLNDFKrh9ht5RZm89i39MQx9Yq7gV3L8bypX1jevs_2PSewWm09HE5dKHBXiLJjpjdF3lELZ5chLYawoW=s907)
+![falcon](/assets/img/trump.png)
+[twitter](https://twitter.com/realDonaldTrump/status/332308211321425920)
 
 But how toxic is that tweet? Thankfully, we’re using a Machine Learning model called Detoxify to compute how toxic a sentence is and how severe-toxic, obscene, threatening, sexually explicit, identity attacking  and threatening it is. It rates it on a scale from 0 to 1 (0 not at all, 1 very). To get an idea, a comment is considered to have a toxicity of 1 if if it is a very ‘hateful, aggressive, or disrespectful that is very likely to make you leave a discussion or give up on sharing your perspective’. 
 For example Trump’s tweet had a score of :
