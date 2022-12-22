@@ -58,6 +58,9 @@ To study far-right wing channels on Youtube, our study will be based on the data
 
 <p align="center">
     <img width="500" src="https://www.selfies.com/wp-content/uploads/sites/5/2022/07/Mutausbrueche-TikTok-Stay-Toxic.jpg" >
+    <a href="https://www.selfies.com/apps/instagram/
+stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Source</a>
+
 </p>
 
 [source](https://www.selfies.com/apps/instagram/
@@ -65,6 +68,8 @@ stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/)
 
 <p align="center">
     <img width="300" src="http://img.picturequotes.com/2/428/427713/have-you-been-playing-in-toxic-waste-lately-quote-1.jpg" >
+    <a href="http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713">Source</a>
+
 </p>
 
 [source](http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713)
@@ -72,6 +77,8 @@ stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/)
 
 <p align="center">
     <img width="500" src="assets/img/toxic_behaviour.png" >
+    <a href="https://www.pinterest.fr/pin/551761391849970879/">Source</a>
+
 </p>
 
 [source](https://www.pinterest.fr/pin/551761391849970879/)
@@ -82,6 +89,8 @@ Some extreme communities are well known for making toxic comments. Taking Trump 
 
 <p align="center">
     <img width="500" src="assets/img/trump.png" >
+    <a href="https://twitter.com/realDonaldTrump/status/332308211321425920">Source</a>
+
 </p>
 
 [twitter](https://twitter.com/realDonaldTrump/status/332308211321425920)
