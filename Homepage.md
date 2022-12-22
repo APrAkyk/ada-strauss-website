@@ -15,7 +15,7 @@ To study far-right wing channels on Youtube, our study will be based on the data
     <i>“Ideas, like young wine, should be put in storage and taken up again only after they have been allowed to ferment and to ripen”<i>
 </p>
 Richard Strauss
-<p align="right " style="color :blue; ">
+<p align="right " style="color :cadetblue; ">
     - Richard Strauss
 </p>
 
@@ -23,7 +23,7 @@ Richard Strauss
     <i>“Music expresses that which cannot be put into words and that which cannot remain silent”<i>
 </p>
 Richard Strauss
-<p align="right " style="color :blue; ">
+<p align="right " style="color :cadetblue; ">
     - Victor Hugo
 </p>
 
@@ -31,7 +31,7 @@ Richard Strauss
     <i>“The wise man doesn't give the right answers, he poses the right questions”<i>
 </p>
 
-<p align="right " style="color :blue; ">
+<p align="right " style="color :cadetblue; ">
     - Claude Levi-Strauss
 </p>
 
