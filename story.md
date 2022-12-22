@@ -95,7 +95,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 (scale of the monkey sequences and the corresponding monkey sentences)
 
 <details open="open">
-<summary> "The monkey makes jokes" </summary>
+<summary> <i>"The monkey makes jokes" </i></summary>
 
 <table class="tb" id="members">
   <tr>
@@ -120,7 +120,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 </details>
 
 <details>
-<summary>"Toxicity of '"The mean monkey makes means jokes about means" </summary>
+<summary><i>"Toxicity of '"The mean monkey makes means jokes about means"</i></summary>
 
 <table class="tb" id="members">
   <tr>
@@ -145,7 +145,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 </details>
 
 <details>
-<summary>"The annoying monkey makes annoying jokes about means"</summary>
+<summary><i>"The annoying monkey makes annoying jokes about means"</i></summary>
 
 <table class="tb" id="members">
   <tr>
@@ -170,7 +170,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 </details>
 
 <details>
-<summary>"The vile monkey makes vile jokes about means" </summary>
+<summary><i>"The vile monkey makes vile jokes about means"</i> </summary>
 
 <table class="tb" id="members">
   <tr>
@@ -195,7 +195,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 </details>
 
 <details>
-<summary>"The malevolent monkey makes malevolent jokes about means" </summary>
+<summary><i>"The malevolent monkey makes malevolent jokes about means"</i> </summary>
 
 <table class="tb" id="members">
   <tr>
@@ -220,7 +220,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 </details>
 
 <details>
-<summary>"The nasty monkey makes nasty jokes about means" </summary>
+<summary><i>"The nasty monkey makes nasty jokes about means" </i></summary>
 
 <table class="tb" id="members">
   <tr>
@@ -270,7 +270,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 </details>
 
 <details>
-<summary>Toxicity of <i>"The despicable monkey makes despicable jokes about means"</i> </summary>
+<summary><i>"The despicable monkey makes despicable jokes about means"</i> </summary>
 
 <table class="tb" id="members">
   <tr>
