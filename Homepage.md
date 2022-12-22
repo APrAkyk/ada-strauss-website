@@ -1,5 +1,6 @@
 ---
 layout: homepage
+title: Strauss project
 ---
 
 # Introduction
