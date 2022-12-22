@@ -14,7 +14,7 @@ To study far-right wing channels on Youtube, our study will be based on the data
 # Toxicity
 ## How to measure toxicity ?
 
-[_Detoxify_](https://github.com/unitaryai/detoxify)is a machine learning model which rates the toxicity of a comment on a scale from 0 to 1 (0 not at all, 1 very much). Furthermore, it detects if it fits into these subcategories of toxicity: **severe_toxicity**, **obscene**, **identity_attack**, **insult**, **threat**, **sexual_explicit**. A comment is rated 1 in toxicity if it is a very ‘hateful, aggressive, or disrespectful that is very likely to make you leave a discussion or give up on sharing your perspective’. 
+[_Detoxify_](https://github.com/unitaryai/detoxify) is a machine learning model which rates the toxicity of a comment on a scale from 0 to 1 (0 not at all, 1 very much). Furthermore, it detects if it fits into these subcategories of toxicity: **severe_toxicity**, **obscene**, **identity_attack**, **insult**, **threat**, **sexual_explicit**. A comment is rated 1 in toxicity if it is a very ‘hateful, aggressive, or disrespectful that is very likely to make you leave a discussion or give up on sharing your perspective’. 
 
 [include example of application of Detoxify, see notebook in to delete/toxic_examples.ipynb . Either include the table, or it would be fun to include “un curseur où l’utilisateur peut choisir le degré de toxiticité”. ]
 
@@ -23,6 +23,42 @@ To study far-right wing channels on Youtube, our study will be based on the data
         <td>Foo</td>
     </tr>
 </table>
+
+    <label for="pet-select">Choose a pet:</label>
+
+    <select name="pets" id="pet-select">
+      <option value="">--Please choose an option--</option>
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+    </select>
+
+    <img id="graphique-1" src="../assets/img/profilAriane.png" />
+
+<script>
+    const selectEl = document.getElementById("pet-select");
+    selectEl.addEventListener("change", (ev) => {
+    console.log("yoooo")
+    switch (selectEl.value) {
+        case "dog":
+        document.getElementById("graphique-1").src = "../assets/img/favicon.png";
+        break;
+        case "cat":
+        document.getElementById("graphique-1").src = "../assets/img/favicon.png";
+        break;
+        default:
+        document.getElementById("graphique-1").src="assets/img/profilAriane.png";
+        document.getElementById("graphique-1").src = "../assets/img/profilAriane.png";
+        break;
+    }
+    })
+</script>
+
+## Process
+
+![Stay toxic](https://www.selfies.com/wp-content/uploads/sites/5/2022/07/Mutausbrueche-TikTok-Stay-Toxic.jpg)(https://www.selfies.com/apps/instagram/stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/)
+
+
+
 
 
 
