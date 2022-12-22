@@ -1,5 +1,6 @@
 ---
 layout: cayman
+title: Strauss project
 ---
 
 # Toxicity
