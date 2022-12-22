@@ -1,5 +1,5 @@
 ---
-layout: cayman
+layout: homepage
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
