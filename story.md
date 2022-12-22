@@ -25,7 +25,7 @@ To study far-right wing channels on Youtube, our study will be based on the data
 </table>
 
 <details>
-<summary>How do I dropdown?</summary>
+<summary>How do I dropdown?<< </summary>
 <br>
 This is how you dropdown.
 </details>
@@ -37,21 +37,21 @@ This is how you dropdown.
     <option value="cat">Cat</option>
 </select>
 
-<img id="graphique-1" src="../assets/img/profilAriane.png" />
+<img id="graphique-1" src="assets/img/profilAriane.png" />
 
 <script>
     const selectEl = document.getElementById("pet-select");
     selectEl.addEventListener("change", (ev) => {
     switch (selectEl.value) {
         case "dog":
-        document.getElementById("graphique-1").src = "../assets/img/favicon.png";
+        document.getElementById("graphique-1").src = "assets/img/favicon.png";
         break;
         case "cat":
-        document.getElementById("graphique-1").src = "../assets/img/favicon.png";
+        document.getElementById("graphique-1").src = "assets/img/favicon.png";
         break;
         default:
         document.getElementById("graphique-1").src="assets/img/profilAriane.png";
-        document.getElementById("graphique-1").src = "../assets/img/profilAriane.png";
+        document.getElementById("graphique-1").src = "assets/img/profilAriane.png";
         break;
     }
     })
