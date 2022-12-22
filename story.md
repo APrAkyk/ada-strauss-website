@@ -330,8 +330,7 @@ Therefore we wondered if being toxic was one of the characteristic features of e
 }
 ```
 
-
-  <p>Chart</p> 
+<p>Chart</p> 
     <div class="chartMenu">
       <p>Hello</p>
     </div>
@@ -382,6 +381,8 @@ Therefore we wondered if being toxic was one of the characteristic features of e
       document.getElementById('myChart'),
       config
     );
+
+</script>
 
 <div id="divpage"><center><iframe src="assets/graph/Each_cat_tox/identity_attack.html height = "500", width = "1000" frameBorder="0"> </iframe></center></div>
 
