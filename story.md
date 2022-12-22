@@ -67,11 +67,11 @@ stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/)
     <img width="300" src="http://img.picturequotes.com/2/428/427713/have-you-been-playing-in-toxic-waste-lately-quote-1.jpg" >
 </p>
 
-[source][http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713)
+[source](http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713)
 
 
 <p align="center">
-    <img width="500" src="../assets/img/toxic_behaviour.png" >
+    <img width="500" src="assets/img/toxic_behaviour.png" >
 </p>
 
 [source](https://www.pinterest.fr/pin/551761391849970879/)
@@ -81,7 +81,7 @@ stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/)
 Some extreme communities are well known for making toxic comments. Taking Trump for example:
 
 <p align="center">
-    <img width="500" src="../assets/img/trump.png" >
+    <img width="500" src="assets/img/trump.png" >
 </p>
 
 [twitter](https://twitter.com/realDonaldTrump/status/332308211321425920)
