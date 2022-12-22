@@ -281,6 +281,8 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 </table>
 
 <details>
+
+<details>
 <summary>Toxicity of 'The bastard monkey makes bastard jokes about means' </summary>
 
 <table class="tb" id="members">
@@ -305,8 +307,12 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 </table>
 
 <details>
+
+<details>
   <summary><i>Epcot Center<i></summary>
+
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+  
 </details>
 
 
