@@ -125,7 +125,6 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
     <th>0.000416</th>
   </tr>
 </table>
-
 </details>
 
 <details>
@@ -151,7 +150,6 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
     <th>0.000387</th>
   </tr>
 </table>
-
 </details>
 
 <details>
@@ -177,7 +175,6 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
     <th>0.000623</th>
   </tr>
 </table>
-
 </details>
 
 <details>
@@ -203,7 +200,6 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
     <th>0.000463</th>
   </tr>
 </table>
-
 </details>
 
 <details>
@@ -229,7 +225,6 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
     <th>0.000831</th>
   </tr>
 </table>
-
 </details>
 
 <details>
@@ -255,6 +250,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
     <th>0.000466</th>
   </tr>
 </table>
+<details>
 
 <details>
 <summary>Toxicity of 'The despicable monkey makes despicable jokes about means' </summary>
@@ -279,7 +275,6 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
     <th>0.000282</th>
   </tr>
 </table>
-
 <details>
 
 <details>
@@ -305,14 +300,12 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
     <th>0.028742</th>
   </tr>
 </table>
-
 <details>
 
 <details>
   <summary><i>Epcot Center<i></summary>
 
   <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-  
 </details>
 
 
