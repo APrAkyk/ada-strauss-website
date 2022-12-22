@@ -250,7 +250,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
     <th>0.000466</th>
   </tr>
 </table>
-<details>
+</details>
 
 <details>
 <summary>Toxicity of 'The despicable monkey makes despicable jokes about means' </summary>
@@ -275,10 +275,10 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
     <th>0.000282</th>
   </tr>
 </table>
-<details>
+</details>
 
 <details>
-<summary>Toxicity of 'The bastard monkey makes bastard jokes about means' </summary>
+<summary>Toxicity of 'The despicable monkey makes despicable jokes about means' </summary>
 
 <table class="tb" id="members">
   <tr>
@@ -300,7 +300,8 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
     <th>0.028742</th>
   </tr>
 </table>
-<details>
+</details>
+
 
 <details>
   <summary><i>Epcot Center<i></summary>
