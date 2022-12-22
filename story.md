@@ -103,7 +103,7 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 (scale of the monkey sequences and the corresponding monkey sentences)
 
 <details>
-<summary>>Toxicity of <i>'The monkey makes jokes'<i> </summary>
+<summary>>Toxicity of 'The monkey makes jokes' </summary>
 
 <table class="tb" id="members">
   <tr>
@@ -207,6 +207,10 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 </details>
 
 </details>
+
+
+
+
 
 
 
