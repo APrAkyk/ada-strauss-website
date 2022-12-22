@@ -322,6 +322,12 @@ Therefore we wondered if being toxic was one of the characteristic features of e
         backgroundColor: ['rgba(255, 26, 104, 0.2)',],
         borderColor: ['rgba(255, 26, 104, 1)',],
         borderWidth: 1
+      },{
+        label: 'Severe toxicity',
+        data: [0.000012, 0.000014 , 0.000018, 0.000017, 0.000031, 0.000024, 0.000016, 0.032880],
+        backgroundColor: ['rgba(255, 26, 104, 0.2)',],
+        borderColor: ['rgba(255, 26, 104, 1)',],
+        borderWidth: 1
       }]
     };
 
@@ -330,11 +336,6 @@ Therefore we wondered if being toxic was one of the characteristic features of e
       type: 'bar',
       data,
       options: {
-        plugins : {
-          legend : {
-            display : false
-          }
-        }
         scales: {
           y: {
             beginAtZero: true
@@ -351,7 +352,6 @@ Therefore we wondered if being toxic was one of the characteristic features of e
     );
 
     </script>
-
 
 
 
