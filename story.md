@@ -297,15 +297,94 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
 
 Therefore we wondered if being toxic was one of the characteristic features of extreme communities. Just as in the study [“Auditing Radicalization Pathways on Youtube”, by Ribeiro et al. (2020)](https://dlab.epfl.ch/people/west/pub/HortaRibeiro-Ottoni-West-Almeida-Meira_FAT-20.pdf), we decided to study the extreme communities ‘Alt-right’, ‘Alt-left’ and ‘Intellectual Dark Web’ aka I.D.W and use medias as our control group. And hopefully twitter isn’t the only place where you can be toxic, there is also the comment section of youtube videos. 
 
-<details>
-  <summary id="mysummary"
-           style="background: lightblue; outline: none;padding: 15px; 
-                  border-radius: 50px;">Order 4A801</summary>
-  <p>You sold 125 shares of MSFT at 11:29 AM</p>
-  <p>You bought 200 shares of GOOG at 11:26 AM</p>
-</details> 
+```chart
+{
+  "type": "pie",
+  "data": {
+    "labels": [
+      "Red",
+      "Blue",
+      "Yellow"
+    ],
+    "datasets": [
+      {
+        "data": [
+          300,
+          50,
+          100
+        ],
+        "backgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
+        ],
+        "hoverBackgroundColor": [
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56"
+        ]
+      }
+    ]
+  },
+  "options": {}
+}
+```
 
+<p>Chart</p> 
+    <div class="chartMenu">
+      <p>Hello</p>
+    </div>
+    <div class="chartCard">
+      <div class="chartBox">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    // setup 
+    const data = {
+      labels: ['The monkey makes jokes', 'The mean monkey makes means jokes about means', 'The annoying monkey makes annoying jokes about means',
+'The vile monkey makes vile jokes about means', 'The malevolent monkey makes malevolent jokes about means', 
+'The nasty monkey makes nasty jokes about means', 'The despicable monkey makes despicable jokes about means', 
+'The bastard monkey makes bastard jokes about means'],
+      datasets: [{
+        label: 'Toxicity',
+        data: [0.080424, 0.158876, 0.197954, 0.319232, 0.462587, 0.615834, 0.707401, 0.995640],
+        backgroundColor: ['rgba(255, 26, 104, 0.2)',],
+        borderColor: ['rgba(255, 26, 104, 1)',],
+        borderWidth: 1
+      },{
+        label: 'Severe toxicity',
+        data: [0.000012, 0.000014 , 0.000018, 0.000017, 0.000031, 0.000024, 0.000016, 0.032880],
+        backgroundColor: ['rgba(255, 26, 104, 0.2)',],
+        borderColor: ['rgba(255, 26, 104, 1)',],
+        borderWidth: 1
+      }]
+    };
 
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+</script>
+
+<div id="divpage"><center><iframe src="assets/graph/Each_cat_tox/identity_attack.html height = "500", width = "1000" frameBorder="0"> </iframe></center></div>
 
 
 
