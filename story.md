@@ -304,7 +304,10 @@ It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a bette
   </tr>
 </table>
 
-
+<details>
+  <summary><i>Epcot Center<i></summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details>
 
 
 
