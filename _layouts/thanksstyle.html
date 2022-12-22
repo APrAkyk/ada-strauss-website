@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: " en-US" }}">
-
 <head>
   <meta charset="UTF-8">
-
   {% seo %}
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style"
@@ -14,11 +12,24 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   {% include head-custom.html %}
 
+  <style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }</style>
+
+  <style></style>
 </head>
 
 <body>
   <a id="skip-to-content" href="#content">Skip to the content.</a>
-
   <header class="page-header" role="banner">
     <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
     <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline
@@ -33,10 +44,8 @@
     <a href="https://aprakyk.github.io/ada-strauss-website/team" class="btn">Team</a>
     {% endif %}
   </header>
-
 <h1>Toxicity</h1>
 <h2>How to measure toxicity ?</h2>
-
 <p><a href="https://github.com/unitaryai/detoxify"><i>Detoxify</i></a>is a machine learning 
 model which rates the toxicity of a comment on a scale from 0 to 1 (0 not at all, 1 very much). 
 Furthermore, it detects if it fits into these subcategories of toxicity: 
@@ -45,9 +54,7 @@ Furthermore, it detects if it fits into these subcategories of toxicity:
 A comment is rated 1 in toxicity if it is a very 
 <i>‘hateful, aggressive, or disrespectful that is very likely to make you leave a 
   discussion or give up on sharing your perspective’</i>.</p>
-
 <h2>Process</h2>
-
 <p align="center">
   <img width="500" src="https://www.selfies.com/wp-content/uploads/sites/5/2022/07/Mutausbrueche-TikTok-Stay-Toxic.jpg" >
 </p>
@@ -55,38 +62,28 @@ A comment is rated 1 in toxicity if it is a very
   <a href="https://www.selfies.com/apps/instagram/
 stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Source</a>
 </p>
-
 <p align="center">
   <img width="300" src="http://img.picturequotes.com/2/428/427713/have-you-been-playing-in-toxic-waste-lately-quote-1.jpg" >
 </p>
-
 <p align="center">
   <a href="http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713">Source</a>
 </p>
-
 <p align="center">
   <img width="500" src="assets/img/toxic_behaviour.png" >
 </p>
-
 <p align="center">
   <a href="https://www.pinterest.fr/pin/551761391849970879/">Source</a>
 </p>
-
 <h2>Introduction</h2>
-
 <p>Some extreme communities are well known for making toxic comments. Taking Trump for example:</p>
-
 <p align="center">
   <img width="500" src="assets/img/trump.png" >
 </p>
-
 <p align="center">
   <a href="https://twitter.com/realDonaldTrump/status/332308211321425920">Twitter</a>
 </p>
-
 <p>But how toxic is that tweet? Thankfully, we’re using a Machine Learning model called Detoxify to compute how toxic a sentence is and how severe-toxic, obscene, threatening, sexually explicit, identity attacking  and threatening it is. It rates it on a scale from 0 to 1 (0 not at all, 1 very). To get an idea, a comment is considered to have a toxicity of 1 if if it is a very ‘hateful, aggressive, or disrespectful that is very likely to make you leave a discussion or give up on sharing your perspective’. 
   For example Trump’s tweet had a score of :</p>
-
   <table class="tb" id="members">
     <tr>
       <th>Toxicity</th>
@@ -111,9 +108,7 @@ stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Sou
   <p>It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a better idea of what toxicity score is associated with what type of sentence, we’re introducing the monkey scale:
     (scale of the monkey sequences and the corresponding monkey sentences)</p>
 
-    <p>Chart</p> 
     <div class="chartMenu">
-      <p>Hello</p>
     </div>
     <div class="chartCard">
       <div class="chartBox">
@@ -136,7 +131,6 @@ stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Sou
         borderWidth: 1
       }]
     };
-
     // config 
     const config = {
       type: 'bar',
@@ -154,25 +148,15 @@ stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Sou
         }
       }
     };
-
     
     // render init block
     const myChart = new Chart(
       document.getElementById('myChart'),
       config
     );
-
 </script>
 
-
-
-
-
-
-
 <h1>BROUILLON : IGNORE</h1>
-
-
   <main id="content" class="main-content" role="main">
     <label for="select_image">Select an image</label>
     <select name="image-select" id="image-select">
@@ -183,7 +167,6 @@ stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Sou
       <option value="graph5">graph5</option>
       <option value="graph6">graph6</option>
     </select>
-
     <label for="graph_input_1">Option 1</label>
     <input id="graph_input_1" type="checkbox" checked>
     <label for="graph_input_2">Option 2</label>
@@ -192,9 +175,7 @@ stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Sou
     <input id="graph_input_3" type="checkbox" checked>
     <label for="graph_input_4">Option 4</label>
     <input id="graph_input_4" type="checkbox" checked>
-
     <img id="graphique-1" src="../assets/img/profilAriane.png" />
-
     <script>
       const selectEl = document.getElementById("image-select");
       selectEl.addEventListener("change", updateImage);
@@ -202,17 +183,13 @@ stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Sou
       document.getElementById("graph_input_2").addEventListener("change", updateImage)
       document.getElementById("graph_input_3").addEventListener("change", updateImage)
       document.getElementById("graph_input_4").addEventListener("change", updateImage)
-
       function updateImage() {
         const noGraphique = parseInt(selectEl.value[5]);
-
         const checked1 = document.getElementById("graph_input_1").checked ? "1" : "0";
         const checked2 = document.getElementById("graph_input_2").checked ? "1" : "0";
         const checked3 = document.getElementById("graph_input_3").checked ? "1" : "0";
         const checked4 = document.getElementById("graph_input_4").checked ? "1" : "0";
-
         console.log(`../assets/img/graphique-${noGraphique}-${checked1}${checked2}${checked3}${checked4}.png`);
-
         // graphique-3-0110.png
         document.getElementById("graphique-1").src = `../assets/img/graphique-${noGraphique}-${checked1}${checked2}${checked3}${checked4}.png`
       } 
@@ -220,7 +197,6 @@ stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Sou
   <p>Graph</p>
   <script>
     var xValues = [100,200,300,400,500,600,700,800,900,1000];
-
     new Chart("myChart", {
       type: "line",
       data: {
@@ -281,7 +257,6 @@ stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Sou
         borderWidth: 1
       }]
     };
-
     // config 
     const config = {
       type: 'bar',
@@ -294,20 +269,16 @@ stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Sou
         }
       }
     };
-
     
     // render init block
     const myChart = new Chart(
       document.getElementById('myChart'),
       config
     );
-
     </script>
     
   </main>
 </body>
-
 <div id="divpage"><center><iframe src="assets/graph/Each_cat_tox/identity_attack.html" height = "500", 
   width = "1000" frameBorder="0"> </iframe></center></div>
-
 </html>
