@@ -24,15 +24,16 @@ To study far-right wing channels on Youtube, our study will be based on the data
     </tr>
 </table>
 
-    <label for="pet-select">Choose a pet:</label>
+```js
+<label for="pet-select">Choose a pet:</label>
 
-    <select name="pets" id="pet-select">
-      <option value="">--Please choose an option--</option>
-      <option value="dog">Dog</option>
-      <option value="cat">Cat</option>
-    </select>
+<select name="pets" id="pet-select">
+    <option value="">--Please choose an option--</option>
+    <option value="dog">Dog</option>
+    <option value="cat">Cat</option>
+</select>
 
-    <img id="graphique-1" src="../assets/img/profilAriane.png" />
+<img id="graphique-1" src="../assets/img/profilAriane.png" />
 
 <script>
     const selectEl = document.getElementById("pet-select");
@@ -52,10 +53,30 @@ To study far-right wing channels on Youtube, our study will be based on the data
     }
     })
 </script>
-
+```
 ## Process
 
 ![Stay toxic](https://www.selfies.com/wp-content/uploads/sites/5/2022/07/Mutausbrueche-TikTok-Stay-Toxic.jpg)(https://www.selfies.com/apps/instagram/stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/)
+
+![Toxic waste](http://img.picturequotes.com/2/428/427713/have-you-been-playing-in-toxic-waste-lately-quote-1.jpg)(http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713)
+![Toxic behaviour](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTRdQ4UNZVTZVVoYptj2-eTw0lxloufeA1ny9Lo7Hag4LXNpivwKyKfAOqWj89YKfHoqLHTyVuYsBiWzypuBLYXAFJ349Z6qsaz2LCq3J33JSYPp=s783)(https://twitter.com/realDonaldTrump/status/332308211321425920)(https://www.pinterest.fr/pin/551761391849970879/)
+
+## Introduction
+
+Some extreme communities are well known for making toxic comments. Taking Trump for example:
+
+![Twitter trump](https://lh3.googleusercontent.com/keep-bbsk/AP6BvTT-P10hHApDunFU3bhhlcGdXaF3sauoLNDFKrh9ht5RZm89i39MQx9Yq7gV3L8bypX1jevs_2PSewWm09HE5dKHBXiLJjpjdF3lELZ5chLYawoW=s907)
+
+But how toxic is that tweet? Thankfully, we’re using a Machine Learning model called Detoxify to compute how toxic a sentence is and how severe-toxic, obscene, threatening, sexually explicit, identity attacking  and threatening it is. It rates it on a scale from 0 to 1 (0 not at all, 1 very). To get an idea, a comment is considered to have a toxicity of 1 if if it is a very ‘hateful, aggressive, or disrespectful that is very likely to make you leave a discussion or give up on sharing your perspective’. 
+For example Trump’s tweet had a score of :
+
+| Toxicity        | Severe toxicity  | Obscene  | Identity attack |  Insult  | Threat   | Sexual explicit |
+|:----------------|:-----------------|:---------|:----------------|:---------|:-------- |:----------------|
+|    0.994145     |     0.000396     | 0.004639 |     0.004734    | 0.988292 | 0.000295 |     0.000622    |
+
+It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a better idea of what toxicity score is associated with what type of sentence, we’re introducing the monkey scale:
+(scale of the monkey sequences and the corresponding monkey sentences)
+
 
 
 
