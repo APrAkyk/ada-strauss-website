@@ -13,8 +13,8 @@ To study far-right wing channels on Youtube, our study will be based on the data
 
 # Acknowledgement 
 
-We would like to thank [Manoel Ribeiro](https://manoelhortaribeiro.github.io/) for helping  his helpful remarks. We were able to successfully complete this project with his help of their guidance and his data that he kindly shared with us. 
-His paper was also very helpful to understant the data we were working on. 
+We would like to thank [Manoel Ribeiro](https://manoelhortaribeiro.github.io/) for helping  his helpful remarks. We were able to successfully complete this project with his guidance and the data that he kindly shared with us. <br>  
+His paper was also very helpful to understand the data we were working on. 
 [YouNiverse: Large-Scale Channel and Video Metadatafrom English-Speaking YouTub](https://ojs.aaai.org/index.php/ICWSM/article/view/18125/17928)
 
 # Credential
