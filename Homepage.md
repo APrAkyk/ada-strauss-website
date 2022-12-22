@@ -12,7 +12,7 @@ Doing so, we would like to see if these channels generate more toxic behavior an
 To study far-right wing channels on Youtube, our study will be based on the data and the results coming from Ribeiro et al. (2020) study. The studied channels are broadly classified into four types: Media (the control group), the Alt-lite, the Intellectual Dark Web (I.D.W) and the Alt-right. 
 
 <p align="center">
-    _“Ideas, like young wine, should be put in storage and taken up again only after they have been allowed to ferment and to ripen”_
+    <i>“Ideas, like young wine, should be put in storage and taken up again only after they have been allowed to ferment and to ripen”<i>
 </p>
 Richard Strauss
 <p align="right ">
@@ -20,15 +20,15 @@ Richard Strauss
 </p>
 
 <p align="center">
-    _“Music expresses that which cannot be put into words and that which cannot remain silent”_
+    <i>“Music expresses that which cannot be put into words and that which cannot remain silent”<i>
 </p>
 Richard Strauss
-<p align="right ">
+<p align="right " style="color :blue; ">
     - Victor Hugo
 </p>
 
-<p align="center">
-    _“The wise man doesn't give the right answers, he poses the right questions”_
+<p align="center" style="color :red; ">
+    <i>“The wise man doesn't give the right answers, he poses the right questions”<i>
 </p>
 Richard Strauss
 <p align="right ">
