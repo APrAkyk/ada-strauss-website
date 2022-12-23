@@ -242,25 +242,41 @@
       
         <label for="pet-select">Choose a pet:</label>
         <select name="pets" id="pet-select">
-            <option value="">--Please choose an option--</option>
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
+            <option value="">Identity attack</option>
+            <option value="insult">Insult</option>
+            <option value="obscene">Obscene</option>
+            <option value="severe">Severe toxicity</option>
+            <option value="sexual">Sexual explicit</option>
+            <option value="threat">Threat</option>
+            <option value="toxicity">Toxicity</option>
         </select>
         
-        <img id="graphique-1" src="assets/img/profilAriane.png"/>
+        <img id="graphique-1" src="assets/img/hex_plots_png/identity-attack.png"/>
         
         <script>
             const selectEl = document.getElementById("pet-select");
             selectEl.addEventListener("change", (ev) => {
             switch (selectEl.value) {
-                case "dog":
-                document.getElementById("graphique-1").src = "assets/img/favicon.png";
+                case "insult":
+                document.getElementById("graphique-1").src = "assets/img/hex_plots_png/insult.png";
                 break;
-                case "cat":
-                document.getElementById("graphique-1").src = "assets/img/favicon.png";
+                case "obscene":
+                document.getElementById("graphique-1").src = "assets/img/hex_plots_png/obcene.png.png";
+                break;
+                case "severe":
+                document.getElementById("graphique-1").src = "assets/img/hex_plots_png/severe-toxicity.png";
+                break;
+                case "sexual":
+                document.getElementById("graphique-1").src = "assets/img/hex_plots_png/sexual-explicit.png";
+                break;
+                case "threat":
+                document.getElementById("graphique-1").src = "assets/img/hex_plots_png/threat.png";
+                break;
+                case "toxicity":
+                document.getElementById("graphique-1").src = "assets/img/hex_plots_png/toxicity.png";
                 break;
                 default:
-                document.getElementById("graphique-1").src="assets/img/profilAriane.png";
+                document.getElementById("graphique-1").src="assets/img/hex_plots_png/identity-attack.png";
                 break;
             }
             })
