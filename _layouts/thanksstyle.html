@@ -200,7 +200,35 @@
         width = "1000" frameBorder="0"> </iframe></center></div> 
     
       
+      <label for="toxicity-select">Choose a toxicity:</label>
+      <select name="toxicity" id="toxicity-select">
+          <option value="">Identity attack</option>
+          <option value="insult">Insult</option>
+          <option value="obscene">Obscene</option>
+      </select>
       
+      <div id="identity_attack"><center><iframe src="../assets/graph/Each_cat_tox/identity_attack.html" height = "500", 
+        width = "1000" frameBorder="0"> </iframe></center></div>
+      
+      <script>
+          const selectEl = document.getElementById("toxicity-select");
+          selectEl.addEventListener("change", (ev) => {
+          switch (selectEl.value) {
+              case "insult":
+              <div id="insult"><center><iframe src="../assets/graph/Each_cat_tox/insult.html" height = "500", 
+               width = "1000" frameBorder="0"> </iframe></center></div>
+              break;
+              case "obscene":
+              <div id="obscene"><center><iframe src="../assets/graph/Each_cat_tox/obscene.html" height = "500", 
+              width = "1000" frameBorder="0"> </iframe></center></div>              
+              break;
+              default:
+              <div id="identity_attack"><center><iframe src="../assets/graph/Each_cat_tox/identity_attack.html" height = "500", 
+              width = "1000" frameBorder="0"> </iframe></center></div>              
+              break;
+          }
+          })
+      </script>
       
       
       
