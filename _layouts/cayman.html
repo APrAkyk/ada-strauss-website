@@ -223,7 +223,11 @@
       <div id="toxicity"><center><iframe src="assets/graph/Each_cat_tox/toxicity.html" height = "500", 
         width = "1000" frameBorder="0"> </iframe></center></div> 
       
-      
+      <p>dsjfidjfs</p>
+
+        <iframe src="assets/graph/Each_cat_tox/toxicity.html" height = "500", 
+        width = "1000" frameBorder="0"> </iframe>
+
       <label for="pet-select">Choose a toxic category GRAPHICH</label>
       <select name="pets" id="pet-select">
           <option value="">Identity attack</option>
@@ -240,19 +244,19 @@
         selectEl.addEventListener("change", (ev) => {
         switch (selectEl.value) {
           case "insult":
-                  document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html">";
+                  document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html"></iframe>";
                 break;
                 case "obscene":
-                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html">";
+                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html"></iframe>";
                 break;
                 case "severe":
-                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html">";
+                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html"></iframe>";
                 break;
                 case "sexual":
-                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html">";
+                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html"></iframe>";
                 break;
                 case "threat":
-                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html">";
+                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html"></iframe>";
                 break;
                 case "toxicity":
                 document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html">";
@@ -266,7 +270,7 @@
 
       <p>For the other toxic categories, we notice that the toxic category score distribution has a 
         larger proportion of videos associated with higher scores for the toxic categories <b>obscene</b>, 
-        <b>identity_attack</b> and <b>insult</b>insult. From a first glance, it looks like the <b>Alt-right</b> might generate less 
+        <b>identity_attack</b> and <b>insult</b>. From a first glance, it looks like the <b>Alt-right</b> might generate less 
         toxic comments out of the three extreme communities. 
         <br><br>
         Although they do not generate so much toxic behavior, there might be a trend where the most popular 
