@@ -72,7 +72,7 @@
           <a href="https://blog.diegovalle.net/2015/02/the-most-partisan-first-names.html"><i>Is it me or is it hot in here?</i></a>
       </p>
 
-      <p>Our goal in this part is to compute how tight knit the extreme communities <b>Alt-lite</b>, <b>IDW</b> and <b>Alt-right</b>Alt-right are. To this end, we’ll define 
+      <p>Our goal in this part is to compute how tight knit the extreme communities <b>Alt-lite</b>, <b>IDW</b> and <b>Alt-right</b> are. To this end, we’ll define 
         a graph where the nodes represent youtube channels (not necessarily associated to extreme communities) and edges represent their 
         influence on each other. We’ll then compute cluster coefficient to quantify the influence of the channels on each other.
       </p>
@@ -89,13 +89,13 @@
          graph. Since we were interested in how influential channels are, we turned the undirected edges into double directed edges and associated
           each edge to a weight: the proportion of people who commented on one channel who also commented on the other channel. </p>
         <p align="center">
-          <img width="275" title="Directed weighted graphic" src="assets/img/directed_graph.png" >
+          <img width="400" title="Directed weighted graphic" src="assets/img/directed_graph.png" >
         </p>
         <p>
         This way we’re able to quantify influence while taking into account the fact that some channels have more subscribers than others: if 
         channel A is more influential than channel B the edge from B to A would have more weight than the weight from A to B. Now that we’ve 
         defined our graph, we’ll compute two clustering coefficients: their <a href="https://fr.wikipedia.org/wiki/PageRank"><b>page rank coefficient</b></a> (computed for a directed graph using 
-        this <a href="https://www.sciencedirect.com/science/article/abs/pii/S096007791730509X?via%3Dihub">paper</a>) and their <a href="https://en.wikipedia.org/wiki/Clustering_coefficient"><b>local clustering coefficient</b></a>(computed for our graph seen as undirected). The point of computing both the page rank 
+        this <a href="https://www.sciencedirect.com/science/article/abs/pii/S096007791730509X?via%3Dihub">paper</a>) and their <a href="https://en.wikipedia.org/wiki/Clustering_coefficient"><b>local clustering coefficient</b></a> (computed for our graph seen as undirected). The point of computing both the page rank 
         and the local clustering coefficient is that it would allow us to compare how influential a channel is among all other channels versus 
         how influential it is among its network. 
         </p>
@@ -105,7 +105,7 @@
       <p>We would expect the channels associated with extreme communities to have a higher local clustering coefficient than the average and a 
         lower page rank coefficient than the average (as we would expect them to be tight knit). We didn’t have time and the resource, and we underestimated 
         the size of our data to compute the local clustering coefficient but we did have time to compute the pagerank coefficient for the whole video set and for the time window restriction.</p>
-      <p>We found an <b>average pagerank coefficient of ~1.10</b>for the community <b>Alt-right</b>, of ~4.85 for the community Alt-lite 
+      <p>We found an <b>average pagerank coefficient of ~1.10</b> for the community <b>Alt-right</b>, of ~4.85 for the community Alt-lite 
         and of 3.20 for the 
         community IDW versus a pagerank coefficient of 0.48 for the whole channel set. </p>
 
@@ -124,7 +124,7 @@
           labels: ['Alt-right', 'Alt-lite', 'IDW','whole channel set'],
           datasets: [{
             label: 'pagerank',
-            data: [0.080424, 0.158876, 0.197954],
+            data: [1.10, 4.85, 3.20,0.48],
             backgroundColor: ['rgba(255, 26, 104, 0.2)',],
             borderColor: ['rgba(255, 26, 104, 1)',],
             borderWidth: 1
