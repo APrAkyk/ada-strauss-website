@@ -244,25 +244,25 @@
         selectEl.addEventListener("change", (ev) => {
         switch (selectEl.value) {
           case "insult":
-                  document.getElementById("imageToToggle_1").src = "assets/img/hex_plots_png/identity_attack_Control.png"
+                  document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
                 break;
                 case "obscene":
-                document.getElementById("imageToToggle_2").src = "assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png"
+                  document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
                 break;
                 case "severe":
-                document.getElementById("imageToToggle_3").src = "assets/img/hex_plots_png/identity_attack_Alt-lite.png"
+                document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
                 break;
                 case "sexual":
-                document.getElementById("imageToToggle_4").src = "assets/img/hex_plots_png/identity_attack_Alt-right.png"
+                document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
                 break;
                 case "threat":
-                document.getElementById("imageToToggle_1").src = "assets/img/hex_plots_png/identity_attack_Control.png"
+                document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
                 break;
                 case "toxicity":
-                document.getElementById("imageToToggle_2").src = "assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png"
+                document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
                 break;
                 default:
-                document.getElementById("imageToToggle_3").src = "assets/img/hex_plots_png/identity_attack_Alt-lite.png"
+                document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
                 break;
         }
         })
