@@ -56,6 +56,14 @@
     </header>
 
     <main id="content" class="main-content" role="main">
+
+      <p align="center" style="color :rgb(11, 95, 240); " font-family: "Times New Roman", Times, serif;>
+          Once upon time, there was a wide and powerful website called Youtube. However, everything was not as perfect as it seemed : often, some 
+          malicious people spread venomous comments...
+      </p>
+
+      <h2>In the universe of Youtube</h2>
+
       <p align="center">
           <img width="500" src="https://blog.diegovalle.net/images/blogger_images/2.bp.blogspot.com_-vnzgFLAoZuE_VNgQ4jE_JnI_AAAAAAAAI60_YOjJurv4NMk_s1600_prd.png" >
       </p>
@@ -70,6 +78,45 @@
       </p>
       
      <h3>Building a directed weighted graph</h3> 
+      <p>To do so, we first defined a bipartite graph where one part represents users, the other part channels, and an edge is drawn between a 
+        user and a channel if the user has commented on a video that was published by that channel. Then we collapsed the bipartite graph by only 
+        keeping the nodes corresponding to channels and drawing an edge between two nodes if they were connected to the same user in the bipartite
+         graph. Since we were interested in how influential channels are, we turned the undirected edges into double directed edges and associated
+          each edge to a weight: the proportion of people who commented on one channel who also commented on the other channel. <br><br> 
+        E.g if we have the channels A and B, A<->B became A-><-B and the left to right edge had weight “proportion of commentators of channel A 
+        who also commented on channel B”. <br> <br>   
+        This way we’re able to quantify influence while taking into account the fact that some channels have more subscribers than others: if channel A is more influential than channel B the edge from B to A would have more weight than the weight from A to B. Now that we’ve defined our graph, we’ll compute two clustering coefficients: their page rank coefficient (computed for a directed graph using this paper) and their local clustering coefficient (computed for our graph seen as undirected). The point of computing both the page rank and the local clustering coefficient is that it would allow us to compare how influential a channel is among all other channels versus how influential it is among its network. 
+        </p>
+      
+    <h3>How tight knit are our extreme communities?</h3>
+
+      <p>We would expect the channels associated with extreme communities to have a higher local clustering coefficient than the average and a lower page rank coefficient than the average (as we would expect them to be tight knit). We didn’t have time/the resource/underestimated the size of our data to compute the local clustering coefficient but we did have time to compute the pagerank coefficient for the whole video set and for the time window restriction.</p>
+      <p>We found an average pagerank coefficient of ~1.10 for the community Alt-right, of ~4.85 for the community Alt-lite and of 3.20 for the community IDW versus a pagerank coefficient of 0.48 for the whole channel set. </p>
+      <p>The pagerank coefficient was much higher than we expected. Looking at the distribution of the video’s coefficients, we notice these are exceptionally high values located in the tail. This would mean that the channels from extreme communities have a lot of influence</p>
+      <p>However, people change so maybe looking at a range of data over several years wouldn’t be representative of how clustered these communities are.</p>
+    
+    <h3>How do our clustering coefficients vary when we consider a shorter time window?</h3>
+      
+      <p>In a second time we’re only considering comments that have been made between 2018 and 2019 (we would expect if a clustered community is still alive that its members have commented during that time on all the community’s trending channels) and computing the pagerank cluster coefficients on this dataset. We get the following results: </p>
+
+      <p>PRESENT result : page rank: Alt-lite 6.12, for Alt-right 1.43, for IDW 4.01 for the whole video set 0.43.
+      </p>
+
+      <p>We notice that these coefficients slightly decreased for the whole video set but considerably increased for the channels associated with extreme communities. This could mean that people don’t stay long in extreme communities but when they are part of it, they are very involved. </p>
+
+    <h3>Discussion</h3>
+
+      <p>When comparing the two clustering coefficients of extreme communities versus non-extreme communities, we didn’t take into consideration the number of the commentators on each channel. For a more rigorous analysis, we could do a matching based on this number between an extreme community channel and a random video and compute the averages on this set. 
+       <br>
+       When computing our clustering coefficients, we didn’t take into account edges that had a weight of less than 0.01 so there are a lot of channels associated with an extreme community that didn’t get taken into consideration.  
+      </p>
+
+    <h3>Quick summary</h3>
+
+      <p>We defined a directed weighted graph using youtube channels as nodes and could only compute the (directed) pagerank clustering coefficient for each node. We found that the extreme communities had a considerably higher coefficient compared to the whole dataset and that gap difference only increased when we restricted our time window and only took data on a one year interval. This could be consistent with the hypothesis that young people are attracted by far right content and get involved a lot in these communities but hopefully only during a short period of time (not on a long term basis). </p>
+
+
+
 
       <p align="center">
         <img width="500" src="assets/img/toxic_behaviour.png" >
