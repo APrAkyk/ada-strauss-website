@@ -57,9 +57,9 @@
 
     <main id="content" class="main-content" role="main">
 
-      <p align="center" style="color :rgb(247,130,90); " font-family: cursive;>
-          Once upon time, there was a wide and powerful website called Youtube. However, everything was not as perfect as it seemed : often, some 
-          malicious people spread venomous comments...
+      <p align="center" style="color :rgb(170, 78, 46); " font-family: cursive;>
+         <i> Once upon time, there was a wide and powerful website called Youtube. However, everything was not as perfect as it seemed : often, some 
+          malicious people spread venomous comments...</i>
       </p>
 
       <h1>In the universe of Youtube</h1>
@@ -72,14 +72,19 @@
           <a href="https://blog.diegovalle.net/2015/02/the-most-partisan-first-names.html"><i>Is it me or is it hot in here?</i></a>
       </p>
 
-      <p>Our goal in this part is to compute how tight knit the extreme communities Alt-lite, IDW and Alt-right are. To this end, we’ll define 
+      <p>Our goal in this part is to compute how tight knit the extreme communities <b>Alt-lite</b>, <b>IDW</b> and <b>Alt-right</b>Alt-right are. To this end, we’ll define 
         a graph where the nodes represent youtube channels (not necessarily associated to extreme communities) and edges represent their 
         influence on each other. We’ll then compute cluster coefficient to quantify the influence of the channels on each other.
       </p>
       
      <h3>Building a directed weighted graph</h3> 
       <p>To do so, we first defined a bipartite graph where one part represents users, the other part channels, and an edge is drawn between a 
-        user and a channel if the user has commented on a video that was published by that channel. Then we collapsed the bipartite graph by only 
+        user and a channel if the user has commented on a video that was published by that channel.</p> 
+        <p align="center">
+          <img width="500" title="Bipartite graph for the authors and channels for the Youniverse dataset" src="assets/img/bipartite.png" >
+      </p>
+      <p>
+        Then we collapsed the bipartite graph by only 
         keeping the nodes corresponding to channels and drawing an edge between two nodes if they were connected to the same user in the bipartite
          graph. Since we were interested in how influential channels are, we turned the undirected edges into double directed edges and associated
           each edge to a weight: the proportion of people who commented on one channel who also commented on the other channel. <br><br> 
@@ -231,7 +236,7 @@
         we decided to study the extreme communities <b>‘Alt-right’</b>,<b>‘Alt-left’</b> and <b>‘Intellectual Dark Web’</b>  
         aka I.D.W and use medias as our control group. <br>
         And hopefully twitter isn't the only place where you can be toxic, there is also the </p>
-        <p align="center" style="color :rgb(240, 11, 145); ">
+        <p align="center" style="color :rgb(255,163,132); ">
           Wonderful &#10024 <i>Comment section</i> &#10024 of youtube videos.
         </p>
 
@@ -262,7 +267,7 @@
         But this toxicity is small as they all reach their peak around 0.2 (on the monkey scale, 
         it would be saying <i>“the annoying monkey made annoying jokes about means”</i>). </p>
 
-      <div id="identity_attack"><center><iframe src="assets/graph/Each_cat_tox/identity_attack.html" height = "500", 
+      <div id="identity_attack"><center><iframe src="assets/graph/Histograms/final.html" height = "500", 
         width = "1000" frameBorder="0"> </iframe></center></div>
       
       <div id="insult"><center><iframe src="assets/graph/Each_cat_tox/insult.html" height = "500", 
