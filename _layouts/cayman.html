@@ -110,7 +110,60 @@
 
 
 
+        <div class="chartMenu">
+        </div>
+        <div class="chartCard">
+          <div class="chartBox">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+        // setup 
+        const data = {
+          labels: ['Alt-right', 'Alt-lite', 'IDW','whole channel set'],
+          datasets: [{
+            label: 'page',
+            data: [1.10, 4.85, 3.20, 0.48],
+            backgroundColor: ['rgba(255, 26, 104, 0.2)',],
+            borderColor: ['rgba(255, 26, 104, 1)',],
+            borderWidth: 1
+          }]
+        };
+        // config 
+        const config = {
+          type: 'bar',
 
+          data,
+
+          options: {
+            scales: {
+                y: {
+                  title: {
+                    display: true,
+                    text: 'Page rank'
+                  }
+                }
+            },
+            plugins : {
+              legend : {
+                display : false
+              },
+            title: {
+              display: true,
+              text: 'Page rank of the 4 considered communities '
+               }
+            }
+          }
+        };
+        
+        // render init block
+        const myChart = new Chart(
+          document.getElementById('myChart'),
+          config
+        );
+    
+    </script>
 
 
 
@@ -252,6 +305,7 @@
           );
       
       </script>
+
       <p>Therefore we wondered if being toxic was one of the characteristic features of extreme communities. 
         Just as in the study <a href="https://dlab.epfl.ch/people/west/pub/HortaRibeiro-Ottoni-West-Almeida-Meira_FAT-20.pdf">“Auditing Radicalization Pathways on Youtube”</a>
         , by Ribeiro et al. (2020), 
