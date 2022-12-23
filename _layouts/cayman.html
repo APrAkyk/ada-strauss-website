@@ -141,7 +141,7 @@
                   y: {
                     title: {
                       display: true,
-                      text: 'Your Title'
+                      text: 'Page rank'
                     }
                   }
             },
@@ -275,22 +275,24 @@
             data,
 
             options: {
-              plugins : {
-                legend : {
-                  display : false
-                }
-              },
-
             scales: {
-              y: {
-                beginAtZero: true,
-                scaleLabel: {
-                  display: true,
-                  labelString: 'toxicity'
-                }
-              }
+                  y: {
+                    title: {
+                      display: true,
+                      text: 'Toxicity'
+                    }
+                  }
+            },
+            plugins : {
+              legend : {
+                display : false
+              },
+              title: {
+                display: true,
+                text: 'Toxcity of the monkey scale'
             }
             }
+          }
           };
           
           // render init block
@@ -300,6 +302,7 @@
           );
       
       </script>
+      
       <p>Therefore we wondered if being toxic was one of the characteristic features of extreme communities. 
         Just as in the study <a href="https://dlab.epfl.ch/people/west/pub/HortaRibeiro-Ottoni-West-Almeida-Meira_FAT-20.pdf">“Auditing Radicalization Pathways on Youtube”</a>
         , by Ribeiro et al. (2020), 
