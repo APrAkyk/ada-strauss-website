@@ -12,6 +12,23 @@ Doing so, we would like to see if these channels generate more toxic behavior an
 
 To study far-right wing channels on Youtube, our study will be based on the data and the results coming from Ribeiro et al. (2020) study. The studied channels are broadly classified into four types: Media (the control group), the Alt-lite, the Intellectual Dark Web (I.D.W) and the Alt-right. 
 
+<p align="center">
+    <img width="500" src="assets/img/graph_intro.png" >
+</p>
+
+<p align="center">
+    <a href="https://medium.com/2key/thegraph-how-to-build-our-subgraph-on-thegraph-hosted-solution-2360938c0323"><i>Is it me or is it hot in here?</i></a>
+</p>
+
+Our goal in this part is to compute how tight knit the extreme communities Alt-lite, IDW and Alt-right are. To this end, we’ll define a graph where the nodes represent youtube channels (not necessarily associated to extreme communities) and edges represent their influence on each other. We’ll then compute cluster coefficient to quantify the influence of the channels on each other.
+
+<p align="center" style="color :BurlyWood; ">
+    <i>“The wise man doesn't give the right answers, he poses the right questions”<i>
+
+<p align="right " style="color :cadetblue; ">
+    - Claude Levi-Strauss
+</p>
+
 # Acknowledgement 
 
 We would like to thank [Manoel Ribeiro](https://manoelhortaribeiro.github.io/) for helping  his helpful remarks. We were able to successfully complete this project with his guidance and the data that he kindly shared with us. <br>  
@@ -32,10 +49,5 @@ We use a server to be able compute of the large amount of data from the YouNiver
 
 Machine learning model which rates the toxicity : [Detoxify](https://github.com/unitaryai/detoxify)
 
-<p align="center" style="color :BurlyWood; ">
-    <i>“The wise man doesn't give the right answers, he poses the right questions”<i>
 
-<p align="right " style="color :cadetblue; ">
-    - Claude Levi-Strauss
-</p>
 
