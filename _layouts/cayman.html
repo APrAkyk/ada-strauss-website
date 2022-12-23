@@ -245,14 +245,14 @@
       <div class="row">
         <div class="column">
           <p align="center">
-          <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-lite.png" alt="Snow" style="width:100%">
-          <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%">
+          <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-lite.png" alt="Snow" style="width:100%" id ="imageToToggle_1">
+          <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%" class = "imageToToggle_2">
           </p>
         </div>
         <div class="column">
           <p align="center">
-          <img width="200" src="assets/img/hex_plots_png/identity_attack_Control.png" alt="Snow" style="width:100%">
-          <img width="200" src="assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png" alt="Snow" style="width:100%">        
+          <img width="200" src="assets/img/hex_plots_png/identity_attack_Control.png" alt="Snow" style="width:100%" id = "imageToToggle_3">
+          <img width="200" src="assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png" alt="Snow" style="width:100%" id = "imageToToggle_4">        
           </p>
         </div>
       </div>
@@ -266,48 +266,22 @@
       
       <img id="graphique-1" src="assets/img/profilAriane.png"/>
       
-      <script>
-          const selectEl = document.getElementById("toxicity-select");
-          selectEl.addEventListener("change", (ev) => {
-          switch (selectEl.value) {
-              case "insult":
-                <div class="row">
-                  <div class="column">
-                    <p align="center">
-                    <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-lite.png" alt="Snow" style="width:100%">
-                    <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%">
-                    </p>
-                  </div>
-                  <div class="column">
-                    <p align="center">
-                    <img width="200" src="assets/img/hex_plots_png/identity_attack_Control.png" alt="Snow" style="width:100%">
-                    <img width="200" src="assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png" alt="Snow" style="width:100%">        
-                    </p>
-                  </div>
-                </div>
-              break;
-              case "obscene":
-                <div class="row">
-                    <div class="column">
-                      <p align="center">
-                      <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-lite.png" alt="Snow" style="width:100%">
-                      <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%">
-                      </p>
-                    </div>
-                    <div class="column">
-                      <p align="center">
-                      <img width="200" src="assets/img/hex_plots_png/identity_attack_Control.png" alt="Snow" style="width:100%">
-                      <img width="200" src="assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png" alt="Snow" style="width:100%">        
-                      </p>
-                    </div>
-                  </div>          
-              break;
-              default:
-                <img id="graphique-1" src="assets/img/profilAriane.png" >
-              break;
-          }
-          })
-      </script>
+      <div class="row hidden" >
+        <div class="column">
+          <p align="center">
+          <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-lite.png" alt="Snow" style="width:100%">
+          <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%">
+          </p>
+        </div>
+        <div class="column">
+          <p align="center">
+          <img width="200" src="assets/img/hex_plots_png/identity_attack_Control.png" alt="Snow" style="width:100%">
+          <img width="200" src="assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png" alt="Snow" style="width:100%">        
+          </p>
+        </div>
+      </div>
+
+      
 
       <p>It turns out that there is either no correlation (among correlation coefficients associated with 
         a p-values less than 0.05, we only have a correlation coefficient of 0.1) or a correlation similar 
@@ -671,6 +645,25 @@
 
     </main>
   </body>
+  <footer>
+    <script>
+      selectEl = document.getElementById("toxicity-select");
+      selectEl.addEventListener("change", (ev) => {
+      switch (selectEl.value) {
+          case "insult":
+            document.getElementById("imageToToggle_1").src = "uneimage.png"
+          break;
+          case "obscene":
+                     
+          break;
+          default:
+            
+          break;
+      }
+      })
+  </script>
+
+  </footer>
 
 
 </html>
