@@ -11,26 +11,33 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
-<style>
-  details > summary {
-    padding: 4px;
-    outline: none;
-    width: 700px;
-    background: lightblue;
-    border-radius: 50px;
-    border: none;
-    box-shadow: 1px 1px 2px #0b5294;
-    cursor: pointer;
-  }
   
-  details > p {
-    background-color: #000000;
-    padding: 15px;
-    margin: 0;
-    box-shadow: 1px 1px 2px #f20b0b;
-  }
+  <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script>
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
   </style>
   </head>
+
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
@@ -49,8 +56,564 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      {{ content }}
+      
+
+      <p align="center">
+        <img width="500" src="assets/img/toxic_behaviour.png" >
+      </p>
+      <p align="center">
+        <a href="https://www.pinterest.fr/pin/551761391849970879/">Source</a>
+      </p>
+
+      
+      <h3>Why do we focus on extreme communities? </h3>
+      <p>Some extreme communities are well known for making toxic comments. Taking Trump for example:</p>
+      <p align="center">
+        <img width="500" src="assets/img/trump.png" >
+      </p>
+      <p align="center">
+        <a href="https://twitter.com/realDonaldTrump/status/332308211321425920">Twitter</a>
+      </p>
+      
+      
+      
+      <p>But how toxic is that tweet? Thankfully, we’re using a Machine Learning model called 
+        <a href="https://github.com/unitaryai/detoxify">Detoxify</a>
+         to compute how toxic a sentence is and how severe-toxic, obscene, threatening, sexually explicit, 
+         identity attacking  and threatening it is. It rates it on a scale from 0 to 1 (0 not at all, 1 very). <br>
+         To get an idea, a comment is considered to have a toxic score of 1 if if it is a very <i>‘hateful, 
+          aggressive, or disrespectful that is very likely to make you leave a discussion or give up on sharing 
+          your perspective’</i>. <br>
+        For example Trump’s tweet had a score of :
+        </p>
+        <table class="tb" id="members">
+          <tr>
+            <th>Toxicity</th>
+            <th>Severe toxicity</th>
+            <th>Obscene</th>
+            <th>Identity attack</th>
+            <th>Insult</th>
+            <th>Threat</th>
+            <th>Sexual explicit</th>
+          </tr>
+          <tr>
+            <th>0.994145</th>
+            <th>0.000296</th>
+            <th>0.004636</th>
+            <th>0.005744</th>
+            <th>0.988292</th>
+            <th>0.000275</th>
+            <th>0.000622</th>
+          </tr>
+        </table>
+        
+        <p>It has a toxicity of ~0.994 and is very insulting (insult~0.988). <br>
+        To get a better idea of what toxicity score is associated with what type of sentence, we're introducing the monkey scale:</p>
+      
+          <div class="chartMenu">
+          </div>
+          <div class="chartCard">
+            <div class="chartBox">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script>
+          // setup 
+          const data = {
+            labels: ['The monkey makes jokes', 'The mean monkey makes means jokes about means', 'The annoying monkey makes annoying jokes about means',
+      'The vile monkey makes vile jokes about means', 'The malevolent monkey makes malevolent jokes about means', 
+      'The nasty monkey makes nasty jokes about means', 'The despicable monkey makes despicable jokes about means', 
+      'The bastard monkey makes bastard jokes about means'],
+            datasets: [{
+              label: 'Toxicity',
+              data: [0.080424, 0.158876, 0.197954, 0.319232, 0.462587, 0.615834, 0.707401, 0.995640],
+              backgroundColor: ['rgba(255, 26, 104, 0.2)',],
+              borderColor: ['rgba(255, 26, 104, 1)',],
+              borderWidth: 1
+            }]
+          };
+          // config 
+          const config = {
+            type: 'bar',
+
+            data,
+
+            options: {
+              plugins : {
+                legend : {
+                  display : false
+                }
+              },
+
+            scales: {
+              y: {
+                beginAtZero: true,
+                scaleLabel: {
+                  display: true,
+                  labelString: 'toxicity'
+                }
+              }
+            }
+            }
+          };
+          
+          // render init block
+          const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+          );
+      
+      </script>
+      <p>Therefore we wondered if being toxic was one of the characteristic features of extreme communities. 
+        Just as in the study <a href="https://dlab.epfl.ch/people/west/pub/HortaRibeiro-Ottoni-West-Almeida-Meira_FAT-20.pdf">“Auditing Radicalization Pathways on Youtube”</a>
+        , by Ribeiro et al. (2020), 
+        we decided to study the extreme communities <b>‘Alt-right’</b>,<b>‘Alt-left’</b> and <b>‘Intellectual Dark Web’</b>  
+        aka I.D.W and use medias as our control group. <br>
+        And hopefully twitter isn't the only place where you can be toxic, there is also the </p>
+        <p align="center" style="color :rgb(240, 11, 145); ">
+          Wonderful &#10024 <i>Comment section</i> &#10024 of youtube videos.
+        </p>
+
+      <h3>Key words</h3>
+
+      <p>In this section, we'll use the terms :</p>
+      <ul>
+        <li> <b>toxic category</b> :  refers to the term toxicity or <i>severe_toxicity</i>, <i>obscene</i>, <i>identity_attack</i>…</li>
+        <li> <b> toxic score array of a comment</b> :  its array output by <a href="https://github.com/unitaryai/detoxify">Detoxify</a> through all toxic categories. 
+        </li>
+        <li> <b>toxic category score</b> :  the value output by <a href="https://github.com/unitaryai/detoxify">Detoxify</a> for this toxic category </li>
+        <li> <b>groups</b> :  refers to the 3 extreme communities <i>Alt-lite</i>, <i>Alt-right</i>, <i>IDW</i> and the control group
+        </li>
+      </ul>  
+
+      <p>To study how toxic the comment section associated with a video is, we computed the <i>toxic_score_array</i>
+      of each comment on that video and took their mean category wise. This way, 
+      we defined the <i>toxic_score_array</i> of a video. Then we wondered how toxic the comment section of a video 
+      associated with an extreme community is . </p>
+
+      <h3>How does the toxic score array of a video associated with an extreme community compare to the one of a video associated with a media? </h3>
+      
+      <p>When we superimpose the distribution of a toxic category score in an extreme community with 
+        the one in the control group, the one associated with the extreme community does seem to have a 
+        higher score than the control group. Although on a general basis this score is small. Indeed, for 
+        the toxic category <b>‘toxicity’</b> we see that in the extreme communities, the proportion of videos 
+        having a high toxicity score is higher than the one of the control group. <br>
+        But this toxicity is small as they all reach their peak around 0.2 (on the monkey scale, 
+        it would be saying <i>“the annoying monkey made annoying jokes about means”</i>). </p>
+
+      <div id="identity_attack"><center><iframe src="assets/graph/Each_cat_tox/identity_attack.html" height = "500", 
+        width = "1000" frameBorder="0"> </iframe></center></div>
+      
+      <div id="insult"><center><iframe src="assets/graph/Each_cat_tox/insult.html" height = "500", 
+        width = "1000" frameBorder="0"> </iframe></center></div>
+
+      <div id="obscene"><center><iframe src="assets/graph/Each_cat_tox/obscene.html" height = "500", 
+        width = "1000" frameBorder="0"> </iframe></center></div> 
+        
+      <div id="severe_toxicity"><center><iframe src="assets/graph/Each_cat_tox/severe_toxicity.html" height = "500", 
+        width = "1000" frameBorder="0"> </iframe></center></div>
+      
+      <div id="sexual_explicit"><center><iframe src="assets/graph/Each_cat_tox/sexual_explicit.html" height = "500", 
+        width = "1000" frameBorder="0"> </iframe></center></div>
+      
+      <div id="threat"><center><iframe src="assets/graph/Each_cat_tox/threat.html" height = "500", 
+        width = "1000" frameBorder="0"> </iframe></center></div>
+
+      <div id="toxicity"><center><iframe src="assets/graph/Each_cat_tox/toxicity.html" height = "500", 
+        width = "1000" frameBorder="0"> </iframe></center></div> 
+      
+      <p>For the other toxic categories, we notice that the toxic category score distribution has a 
+        larger proportion of videos associated with higher scores for the toxic categories <b>obscene</b>, 
+        <b>identity_attack</b> and <b>insult</b>insult. From a first glance, it looks like the <b>Alt-right</b> might generate less 
+        toxic comments out of the three extreme communities. 
+        <br><br>
+        Although they do not generate so much toxic behavior, there might be a trend where the most popular 
+        videos (that we define as being the most watched) are also the ones generating the most toxic 
+        behaviors. Meaning that although the community might not generate much toxicity, people might go 
+        all out on the most popular videos. 
+        </p>
+      <h3>Is the popularity of a video correlated to its toxicity (or to any other toxic category)?</h3>
+
+      <p>To check if there is a correlation, we plotted a scatter plot of each toxic category score and the 
+        view count associated with the video. We also computed the correlation coefficient between the two 
+        using Pearson’s (for linear correlation), Spearman’s (for monotonic correlation) and Kendall Tau’s 
+        (for class correlation) correlation coefficient and their associated p-values. </p>
+      
+      <b>PLOT GRAPH (2)</b>
+
+      <div class="row">
+        <div class="column">
+          <img src="assets/img/hex_plots_png/identity_attack_Alt-lite.png" alt="Snow" style="width:100%">
+          <img src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="assets/img/hex_plots_png/identity_attack_Control.png" alt="Snow" style="width:100%">
+          <img src="assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png" alt="Snow" style="width:100%">        </div>
+      </div>
+
+      <p>It turns out that there is either no correlation (among correlation coefficients associated with 
+        a p-values less than 0.05, we only have a correlation coefficient of 0.1) or a correlation similar 
+        to the one in the control group (ex: correlation of 0.4 between <i>sexual_explicite</i> score and the view 
+        count for all 4 groups considered) . However, looking at the scatter plots, we notice that often 
+        there is a very large proportion of videos in one exact spot, especially the one corresponding to 
+        videos that have a little view count and a little toxic category score. So what would happen if we 
+        only looked at the top 25 most seen videos (eye emoji)? We’re computing again the scatter plots and 
+        the various correlation coefficients.
+      </p>
+
+      <b>PLOT GRAPH (2)</b>
+
+      <p>
+        Videos in <b>Alt right</b> and <b>IDW</b> have medium correlation coefficients between their view count and their 
+        toxicity (Alt right has a Pearson’s correlation coefficient of 0.4 and IDW has a Spearman correlation 
+        coefficient of 0.5 and both have associated p-value less than 0.5) and Alt-right and IDW also have a 
+        higher than 0.4 correlation and p inferior to 0.05 for the toxic categories <i>sexual explicit</i> 
+        comments, <i>threat</i>, 
+        <i>insult</i>, <i>obscene</i> and <i>severe toxicity</i>. 
+        <br><br>
+        Now we can ask ourselves if that trend is only associated with a few videos and is not a channel 
+        trend.
+      </p>
+
+
+      <h3>Is the popularity of a channel correlated to its toxicity  (or to any other toxic category)?</h3> 
+      
+      <p>Again we computed the scatter plots and the correlation coefficients : </p>
+
+      <b>PLOT GRAPH (1)</b>
+
+      <p>In this case, we noticed that all numbers and behavior coincide with the one of the control group 
+        so it is not related to them being extreme communities. 
+        <br><br>
+        We have noticed that these extreme communities are more toxic than the control group media. 
+        But has it always been the case or is there a trend where comments on youtube videos are becoming 
+        more and more toxic? Already in 2018, Forbes published an article about how social media is becoming 
+        too toxic. 
+      </p>
+
+      
+      <p align="center">
+        <img width="500" src="assets/img/ford.png" >
+      </p>
+      <p align="center">
+        <a href="https://www.forbes.com/sites/kalevleetaru/2018/07/19/is-social-media-becoming-too-toxic/">Is social media becoming too toxic ?</a>
+      </p>
+
+      <p>This lead us to the following question : </p>
+      <p align="center" style="color :rgb(11, 84, 240); ">
+        <i>How have the different toxic category scores evolved through time?</i> &#129488
+      </p>
+
+      <h3>How have the different toxic category scores evolved through time?</h3>
+
+      <p>By studying data between January 2014 and April 2019, we observe the monthly evolution of the 
+        different toxic categories, among the 4 different groups. <br> 
+        We first compared them to each other: 
+        </p>
+
+      <b>PLOT GRAPH (1)</b>
+
+      <p>As before, the subcategories <i>‘severe toxicity’</i>, <i>‘threat’</i> and <i>‘sexual explicit’</i> 
+         have a very small scale throughout the time so their effect is negligible for each group. Furthermore, 
+        concerning the other toxic categories, the toxic category scores associated with the <b>Alt-lite</b>  channel 
+        are generally above the control group, though this is only a difference of max 0.05 point. The 
+        <b>alt-right</b> and <b>IDW</b> communities have usually the same or greater score compared to the control 
+        group. However, the differences are not noticeably high. <br><br>
+
+        We have seen previously that group-wise, some toxic category scores tend to be higher than others, 
+        we’re computing if it has always been the case. 
+        </p>
+
+      <b>PLOT GRAPH (1)</b>
+      
+      <p>On the graphs, we see that three toxic categories stand out: <i>toxicity</i>, <i>insult</i> and 
+        <i>obscene</i>. 
+        The fact that toxicity stands out makes sense as all the other toxic categories are defined as 
+        ‘sub toxicities’ so it makes sense that they have lower scores. However, the fact that among toxic 
+        comments a lot of them are insults or obscene is interesting. <br><br>
+
+        Concerning the <b>Alt-lite</b> community, there is a small constant increase of the three main toxic 
+        categories (mentioned above) until 2018, where a drop is observed (for a hypothesis on this, see
+        discussion a.). After that, the values are quite stable. <br><br>
+        Moreover, a steep increase is observed mid 2016 in <i>‘toxicity’</i>, <i>‘insult’</i> and <i>‘obscene’</i>  
+        in the <b>Alt-right</b>
+         community’s comments (for a hypothesis, see discussion b. ????????). We also see a peak in the 
+        first quarter of 2018, however no political events seem to coincide with it.
+        <br><br>
+        We saw previously that the 25 most viewed videos per group have a stronger correlation with 
+        each toxic category score than when we considered all the group’s videos. We’re computing how it 
+        reflects in numbers throughout time.
+        </p>
+
+      <b>PLOT GRAPH (2)</b>
+    
+    <p>The top 25 videos usually have the same or a noticeably higher mean than the overall mean of 
+      their corresponding category. This is most detectable in the <b>Alt-lite</b> community. However, the reverse 
+      happens in the control group. Indeed, after mid 2015, the most viewed videos are less toxic than the 
+      mean of all the videos. <br> 
+      Moreover, the absolute difference of toxicity in between the top 25 videos of <b>Alt-lite</b> and the control 
+      group is bigger than 0.1, which is an important difference. This difference can also be observed in 
+      other toxic categories, like <i>‘severe toxicity’</i>, <i>‘obscene’</i> , and <i>‘insult’</i>. The same way 
+      among extreme 
+      communities, <b>Alt-lite</b> is the one for which the difference between the toxic category score of the top 
+      25 and the entire set of videos is the largest. <br>
+      On a general basis, starting mid 2015, we observe a really different behavior between the control group 
+      and the extreme communities. 
+      </p>
+    
+    <h3>Discussion</h3>
+
+    <p>We could look into the relationship between a video content and toxicity category score of the 
+      associated comment section. By applying <a href="https://github.com/unitaryai/detoxify">Detoxify</a> on the caption of the comments we could study if 
+      there is a correlation between the toxic category score of the caption of a video and the toxic 
+      category score of its comment section. <br>
+      Do notice that the machine learning model <a href="https://github.com/unitaryai/detoxify">Detoxify</a> has a lot of limits even the unbiased version. 
+      E.g the formulation of a sentence can make the toxicity vary a lot: <i>'I am at the zoo and I see a 
+        black monkey'</i> has a toxicity of 0.19 and <i>'I saw a black monkey at the zoo'</i> has a toxicity of 0.06. <br>
+      [dataframe in toxic_example.ipynb] WHICH ONE ???? DO I HAVE TO ADD A GRAPH ?<br>
+      The same way, a comment is considered obscene if you use a swear word even in a positive way. For example the sentence <i>“that was fucking brilliant”</i> has an obscene score of ~0.95.
+      </p>
+
+    <table class="tb" id="members">
+      <tr>
+        <th>Toxicity</th>
+        <th>Severe toxicity</th>
+        <th>Obscene</th>
+        <th>Identity attack</th>
+        <th>Insult</th>
+        <th>Threat</th>
+        <th>Sexual explicit</th>
+      </tr>
+      <tr>
+        <th>0.942965</th>
+        <th>0.015987</th>
+        <th>0.953825</th>
+        <th>0.002574</th>
+        <th>0.089621</th>
+        <th>0.000974</th>
+        <th>0.026361</th>
+      </tr>
+    </table> 
+
+    <p>This raises the questions: 
+      <p align="center" style="color :rgb(187, 11, 240); ">
+        Can using a swear word hurt someone’s sensibility? Are swear words toxic? 
+        <p align="right" style="color :rgb(207, 139, 209); "> 
+        Any mom would obviously say yes....</p>
+    
+    <p>In further research, we could try to connect the variations in the toxic category scores to 
+      major events. For example for a. =INTRALINK a hypothesis to explain why the values have dropped is the <b><i>#Metoo</i></b> 
+      movement, starting in 2017 as a way to draw attention on the magnitude against sexual abuse and 
+      harassment. For b. =INTRALINK it coincides with the election of Donald Trump in the United States. Indeed, in June 
+      2015, he announced that he would be a candidate in the U.S. presidential election of 2016. In November 
+      2016, he won the election. Also, following the Russian interference in the 2016 U.S. elections, 
+      YouTube didn't initiate any moderation. <br> <br>
+
+      In our project we only computed the correlation and didn’t conduct a causality study so this could 
+      be ground for further research. 
+      </p>
+    
+    <h3>Quick summary</h3>
+    <p>Overall on average, videos associated with extreme communities have a higher toxic category score 
+      than the ones associated with the control group but still have a relatively small score (around 0.2). 
+      When looking at the evolution of the toxicity category scores through time per group, we find again 
+      that the absolute differences seem negligible. We could assume some hypotheses about the reasons for 
+      certain decreases and increases but, the toxicity levels did not seem abnormal.<br><br>
+      When restricting ourselves to the 25 most seen videos and computing the correlation between the view 
+      count and the toxic category scores, we get correlation scores as high as 0.6 for the extreme 
+      communities Alt-right and IDW. However, when looking at the toxic category scores of the top 25 videos 
+      per month per group, the most important score difference between the top 25 of the control group and 
+      the top 25 of an extreme community is reached for Alt-lite with a score difference of more than 0.1 for 
+      the toxicity. Moreover Alt-lite also has the highest toxic category scores difference between its top 
+      25 videos and its whole video set. This difference could also be observed in other subcategories of 
+      toxicity. This is really interesting as it means that although the top 25 videos of Alt-lite are the 
+      ones generating the most toxic behaviors, it doesn’t seem like generating toxic behavior is something 
+      specific to its most popular videos. On the opposite, for the Alt-right and IDW videos, they generate 
+      less toxic behavior but there is a higher tendency that it would be something specific to popular 
+      videos.<br> <br>
+      In further research, for more precision we would need to investigate all the edge cases of the machine 
+      learning algorithm <a href="https://github.com/unitaryai/detoxify">Detoxify</a>. Indeed, the scores become abnormally high when a certain biased vocabulary 
+      is used, or when a sensitive couple of words is written together.
+      </p>
+    
+    <h2>Conclusion</h2>
+
+
+
+
+
+
+      <script>
+      jQuery.get("../assets/graph/Each_cat_tox/identity_attack.html").then(function(html){
+      document.body.innerHTML = html;
+      });
+      </script>
+
+
+
+      <label for="toxicity-select">Choose a toxicity:</label>
+      <select name="toxicity" id="toxicity-select">
+          <option value="">Identity attack</option>
+          <option value="insult">Insult</option>
+          <option value="obscene">Obscene</option>
+      </select>
+      
+      <img id="graphique-1" src="assets/img/profilAriane.png" />
+      
+      <script>
+          const selectEl = document.getElementById("toxicity-select");
+          selectEl.addEventListener("change", (ev) => {
+          switch (selectEl.value) {
+              case "insult":
+              <div id="insult"><center><iframe src="../assets/graph/Each_cat_tox/insult.html" height = "500", 
+               width = "1000" frameBorder="0"> </iframe></center></div>
+              break;
+              case "obscene":
+              <div id="obscene"><center><iframe src="../assets/graph/Each_cat_tox/obscene.html" height = "500", 
+              width = "1000" frameBorder="0"> </iframe></center></div>              
+              break;
+              default:
+              <div id="identity_attack"><center><iframe src="../assets/graph/Each_cat_tox/identity_attack.html" height = "500", 
+              width = "1000" frameBorder="0"> </iframe></center></div>              
+              break;
+          }
+          })
+      </script>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <h2>BROUILLON : IGNORE</h2>
+          <label for="select_image">Select an image</label>
+          <select name="image-select" id="image-select">
+            <option value="graph1">graph1</option>
+            <option value="graph2">graph2</option>
+            <option value="graph3">graph3</option>
+            <option value="graph4">graph4</option>
+            <option value="graph5">graph5</option>
+            <option value="graph6">graph6</option>
+          </select>
+          <label for="graph_input_1">Option 1</label>
+          <input id="graph_input_1" type="checkbox" checked>
+          <label for="graph_input_2">Option 2</label>
+          <input id="graph_input_2" type="checkbox" checked>
+          <label for="graph_input_3">Option 3</label>
+          <input id="graph_input_3" type="checkbox" checked>
+          <label for="graph_input_4">Option 4</label>
+          <input id="graph_input_4" type="checkbox" checked>
+          <img id="graphique-1" src="../assets/img/profilAriane.png" />
+          <script>
+            const selectEl = document.getElementById("image-select");
+            selectEl.addEventListener("change", updateImage);
+            document.getElementById("graph_input_1").addEventListener("change", updateImage)
+            document.getElementById("graph_input_2").addEventListener("change", updateImage)
+            document.getElementById("graph_input_3").addEventListener("change", updateImage)
+            document.getElementById("graph_input_4").addEventListener("change", updateImage)
+            function updateImage() {
+              const noGraphique = parseInt(selectEl.value[5]);
+              const checked1 = document.getElementById("graph_input_1").checked ? "1" : "0";
+              const checked2 = document.getElementById("graph_input_2").checked ? "1" : "0";
+              const checked3 = document.getElementById("graph_input_3").checked ? "1" : "0";
+              const checked4 = document.getElementById("graph_input_4").checked ? "1" : "0";
+              console.log(`../assets/img/graphique-${noGraphique}-${checked1}${checked2}${checked3}${checked4}.png`);
+              // graphique-3-0110.png
+              document.getElementById("graphique-1").src = `../assets/img/graphique-${noGraphique}-${checked1}${checked2}${checked3}${checked4}.png`
+            } 
+          </script>
+        <p>Graph</p>
+        <script>
+          var xValues = [100,200,300,400,500,600,700,800,900,1000];
+          new Chart("myChart", {
+            type: "line",
+            data: {
+              labels: xValues,
+              datasets: 
+              [
+                { 
+                data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                borderColor: "red",
+                fill: false
+                }, 
+                { 
+                data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                borderColor: "green",
+                fill: false
+                }, 
+                { 
+                data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                borderColor: "blue",
+                fill: false
+                }
+              ]
+            },
+            options: {
+              legend: {display: false}
+            }
+          });
+        </script>
+        
+        <p>Chart</p> 
+          <div class="chartMenu">
+            <p>Hello</p>
+          </div>
+          <div class="chartCard">
+            <div class="chartBox">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script>
+          // setup 
+          const data = {
+            labels: ['The monkey makes jokes', 'The mean monkey makes means jokes about means', 'The annoying monkey makes annoying jokes about means',
+      'The vile monkey makes vile jokes about means', 'The malevolent monkey makes malevolent jokes about means', 
+      'The nasty monkey makes nasty jokes about means', 'The despicable monkey makes despicable jokes about means', 
+      'The bastard monkey makes bastard jokes about means'],
+            datasets: [{
+              label: 'Toxicity',
+              data: [0.080424, 0.158876, 0.197954, 0.319232, 0.462587, 0.615834, 0.707401, 0.995640],
+              backgroundColor: ['rgba(255, 26, 104, 0.2)',],
+              borderColor: ['rgba(255, 26, 104, 1)',],
+              borderWidth: 1
+            },{
+              label: 'Severe toxicity',
+              data: [0.000012, 0.000014 , 0.000018, 0.000017, 0.000031, 0.000024, 0.000016, 0.032880],
+              backgroundColor: ['rgba(255, 26, 104, 0.2)',],
+              borderColor: ['rgba(255, 26, 104, 1)',],
+              borderWidth: 1
+            }]
+          };
+          // config 
+          const config = {
+            type: 'bar',
+            data,
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          };
+          
+          // render init block
+          const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+          );
+          </script>
+          
+      <div id="divpage"><center><iframe src="assets/graph/Each_cat_tox/identity_attack.html" height = "500", 
+        width = "1000" frameBorder="0"> </iframe></center></div>
 
     </main>
   </body>
+
+
 </html>
