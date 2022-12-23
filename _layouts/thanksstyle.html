@@ -205,12 +205,13 @@
         width = "1000" frameBorder="0"> </iframe></center></div> 
     
       <script>
-              $(document).ready(function () {
-                $('#homePage').click(function () {
-                        $(this).load('../assets/graph/Each_cat_tox/identity_attack.html');
-              });
+      jQuery.get("../assets/graph/Each_cat_tox/identity_attack.html").then(function(html){
+      document.body.innerHTML = html;
       });
       </script>
+
+
+
       <label for="toxicity-select">Choose a toxicity:</label>
       <select name="toxicity" id="toxicity-select">
           <option value="">Identity attack</option>
@@ -225,10 +226,8 @@
           selectEl.addEventListener("change", (ev) => {
           switch (selectEl.value) {
               case "insult":
-              <script>
               <div id="insult"><center><iframe src="../assets/graph/Each_cat_tox/insult.html" height = "500", 
                width = "1000" frameBorder="0"> </iframe></center></div>
-               </script>
               break;
               case "obscene":
               <div id="obscene"><center><iframe src="../assets/graph/Each_cat_tox/obscene.html" height = "500", 
