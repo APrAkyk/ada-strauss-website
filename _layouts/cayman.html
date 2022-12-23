@@ -242,6 +242,33 @@
       
       <b>PLOT GRAPH (2)</b>
 
+      <label for="toxicity-select-hex">Choose a toxicity:</label>
+      <select name="toxicity-hex" id="toxicity-select-hex">
+          <option value="">Identity attack</option>
+          <option value="insult">Insult</option>
+          <option value="obscene">Obscene</option>
+      </select>
+      
+      <img id="graphique-1" src="assets/img/profilAriane.png"/>
+      
+      <script>
+          const selectEl = document.getElementById("toxicity-select-hex");
+          selectEl.addEventListener("change", (ev) => {
+          switch (selectEl.value) {
+              case "insult":
+                <img id="graphique-1" src="assets/img/hex_plots_png/insult.png">
+              break;
+              case "obscene":
+                <img id="graphique-1" src="assets/img/hex_plots_png/obcene.png"/>
+              break;
+              default:
+                <img id="graphique-1" src="assets/img/profilAriane.png" >
+              break;
+          }
+          })
+      </script>
+      
+
       <div class="row">
         <div class="column">
           <p align="center">
@@ -401,6 +428,94 @@
       </p>
 
       <b>PLOT GRAPH (2)</b>
+
+      <table >
+          <td style="text-align: center" colspan="7">Alt lite</td>
+          <tr>
+            <th>Toxicity</th>
+            <th>Severe toxicity</th>
+            <th>Obscene</th>
+            <th>Identity attack</th>
+            <th>Insult</th>
+            <th>Threat</th>
+            <th>Sexual explicit</th>
+          </tr>
+          <tr>
+            <th>Kendall  -0.185</th>
+            <th>Spearman 0.512</th>
+            <th>Spearman 0.415</th>
+            <th>Spearman 0.358</th>
+            <th>Spearman 0.287</th>
+            <th>Spearman 0.489</th>
+            <th>Spearman 0.489</th>
+          </tr>
+      </table>
+
+      <table >
+          <td style="text-align: center" colspan="7">ALt right</td>
+          <tr>
+            <th>Toxicity</th>
+            <th>Severe toxicity</th>
+            <th>Obscene</th>
+            <th>Identity attack</th>
+            <th>Insult</th>
+            <th>Threat</th>
+            <th>Sexual explicit</th>
+          </tr>
+          <tr>
+            <th>Spearman  0.204</th>
+            <th>Spearman  0.435</th>
+            <th>Spearman  0.327</th>
+            <th>Spearman  0.306</th>
+            <th>Kendall   0.169</th>
+            <th>Spearman  0.455</th>
+            <th>Spearman  0.422</th>
+          </tr>
+      </table>
+
+      <table >
+          <td style="text-align: center" colspan="7">Intellectual Dark Web</td>
+          <tr>
+            <th>Toxicity</th>
+            <th>Severe toxicity</th>
+            <th>Obscene</th>
+            <th>Identity attack</th>
+            <th>Insult</th>
+            <th>Threat</th>
+            <th>Sexual explicit</th>
+          </tr>
+          <tr>
+            <th>Spearman 0.272</th>
+            <th>Spearman 0.504</th>
+            <th>Spearman 0.413</th>
+            <th>Spearman 0.384</th>
+            <th>Spearman 0.263</th>
+            <th>Spearman 0.589</th>
+            <th>Spearman 0.506</th>
+          </tr>
+      </table>
+
+      <table >
+          <td style="text-align: center" colspan="7">Control</td>
+          <tr>
+            <th>Toxicity</th>
+            <th>Severe toxicity</th>
+            <th>Obscene</th>
+            <th>Identity attack</th>
+            <th>Insult</th>
+            <th>Threat</th>
+            <th>Sexual explicit</th>
+          </tr>
+          <tr>
+            <th>Spearman 0.173</th>
+            <th>Spearman 0.373</th>
+            <th>Spearman 0.339</th>
+            <th>Spearman 0.238</th>
+            <th>Spearman 0.242</th>
+            <th>Spearman 0.352</th>
+            <th>Spearman 0.406</th>
+          </tr>
+      </table>
 
       <p>
         Videos in <b>Alt right</b> and <b>IDW</b> have medium correlation coefficients between their view count and their 
