@@ -32,37 +32,17 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      <h2>Toxicity</h2>
-      <h3>How to measure toxicity ?</h3>
-      <p><a href="https://github.com/unitaryai/detoxify"><i>Detoxify</i></a>is a machine learning 
-      model which rates the toxicity of a comment on a scale from 0 to 1 (0 not at all, 1 very much). 
-      Furthermore, it detects if it fits into these subcategories of toxicity: 
-      <b>severe_toxicity</b>, <b>obscene</b>, <b>identity_attack</b>, <b>insult</b>, <b>threat</b>,
-       <b>sexual_explicit</b>. 
-      A comment is rated 1 in toxicity if it is a very 
-      <i>‘hateful, aggressive, or disrespectful that is very likely to make you leave a 
-        discussion or give up on sharing your perspective’</i>.</p>
-      <h2>Process</h2>
-      <p align="center">
-        <img width="500" src="https://www.selfies.com/wp-content/uploads/sites/5/2022/07/Mutausbrueche-TikTok-Stay-Toxic.jpg" >
-      </p>
-      <p align="center">
-        <a href="https://www.selfies.com/apps/instagram/
-      stay-toxic-lustiger-social-media-trend-tiktok-insta-beziehungstipps-141719/">Source</a>
-      </p>
-      <p align="center">
-        <img width="300" src="http://img.picturequotes.com/2/428/427713/have-you-been-playing-in-toxic-waste-lately-quote-1.jpg" >
-      </p>
-      <p align="center">
-        <a href="http://www.picturequotes.com/have-you-been-playing-in-toxic-waste-lately-quote-427713">Source</a>
-      </p>
+      
+
       <p align="center">
         <img width="500" src="assets/img/toxic_behaviour.png" >
       </p>
       <p align="center">
         <a href="https://www.pinterest.fr/pin/551761391849970879/">Source</a>
       </p>
-      <h2>Introduction</h2>
+
+      
+      <h3>Why do we focus on extreme communities? </h3>
       <p>Some extreme communities are well known for making toxic comments. Taking Trump for example:</p>
       <p align="center">
         <img width="500" src="assets/img/trump.png" >
@@ -73,8 +53,9 @@
       
       
       
-      <p>But how toxic is that tweet? Thankfully, we’re using a Machine Learning model called Detoxify to compute how toxic a sentence is and how severe-toxic, obscene, threatening, sexually explicit, identity attacking  and threatening it is. It rates it on a scale from 0 to 1 (0 not at all, 1 very). To get an idea, a comment is considered to have a toxicity of 1 if if it is a very ‘hateful, aggressive, or disrespectful that is very likely to make you leave a discussion or give up on sharing your perspective’. 
-        For example Trump’s tweet had a score of :</p>
+      <p>But how toxic is that tweet? Thankfully, we’re using a Machine Learning model called [Detoxify](https://github.com/unitaryai/detoxify) to compute how toxic a sentence is and how severe-toxic, obscene, threatening, sexually explicit, identity attacking  and threatening it is. It rates it on a scale from 0 to 1 (0 not at all, 1 very). To get an idea, a comment is considered to have a toxic score of 1 if if it is a very ‘hateful, aggressive, or disrespectful that is very likely to make you leave a discussion or give up on sharing your perspective’. 
+        For example Trump’s tweet had a score of :
+        </p>
         <table class="tb" id="members">
           <tr>
             <th>Toxicity</th>
@@ -87,17 +68,16 @@
           </tr>
           <tr>
             <th>0.994145</th>
-            <th>0.000396</th>
-            <th>0.004734</th>
-            <th>0.004734</th>
+            <th>0.000296</th>
+            <th>0.004636</th>
+            <th>0.005744</th>
             <th>0.988292</th>
-            <th>0.000295</th>
+            <th>0.000275</th>
             <th>0.000622</th>
           </tr>
         </table>
         
-        <p>It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a better idea of what toxicity score is associated with what type of sentence, we’re introducing the monkey scale:
-          (scale of the monkey sequences and the corresponding monkey sentences)</p>
+        <p>It has a toxicity of ~0.994 and is very insulting (insult~0.988). To get a better idea of what toxicity score is associated with what type of sentence, we're introducing the monkey scale:</p>
       
           <div class="chartMenu">
           </div>
@@ -145,8 +125,15 @@
             document.getElementById('myChart'),
             config
           );
-      </script>
       
+      </script>
+      <p>Therefore we wondered if being toxic was one of the characteristic features of extreme communities. 
+        Just as in the study “Auditing Radicalization Pathways on Youtube”, by Ribeiro et al. (2020), 
+        we decided to study the extreme communities ‘Alt-right’, ‘Alt-left’ and ‘Intellectual Dark Web’ 
+        aka I.D.W and use medias as our control group. And hopefully twitter isn't the only place where you can be toxic, there is also the</p>
+      <p style="color :rgb(240, 11, 145); ">&#10024 <i>Comment section</i> &#10024</p>
+      <p>of youtube videos.</p>
+
       <h2>BROUILLON : IGNORE</h2>
           <label for="select_image">Select an image</label>
           <select name="image-select" id="image-select">
