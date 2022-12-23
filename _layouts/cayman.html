@@ -249,20 +249,20 @@
           <option value="obscene">Obscene</option>
       </select>
       
-      <img id="graphique-1" src="assets/img/profilAriane.png"/>
+      <img id="graphique-1" src="../assets/img/profilAriane.png"/>
       
       <script>
           const selectEl = document.getElementById("toxicity-select-hex");
           selectEl.addEventListener("change", (ev) => {
           switch (selectEl.value) {
               case "insult":
-                <img id="graphique-1" src="assets/img/hex_plots_png/insult.png">
+                <img id="graphique-1" src="../assets/img/hex_plots_png/insult.png">
               break;
               case "obscene":
-                <img id="graphique-1" src="assets/img/hex_plots_png/obcene.png"/>
+                <img id="graphique-1" src="../assets/img/hex_plots_png/obcene.png"/>
               break;
               default:
-                <img id="graphique-1" src="assets/img/profilAriane.png" >
+                <img id="graphique-1" src="../assets/img/profilAriane.png" >
               break;
           }
           })
