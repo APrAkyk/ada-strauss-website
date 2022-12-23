@@ -257,6 +257,58 @@
         </div>
       </div>
 
+      <label for="toxicity-select">Choose a toxicity:</label>
+      <select name="toxicity" id="toxicity-select">
+          <option value="">Identity attack</option>
+          <option value="insult">Insult</option>
+          <option value="obscene">Obscene</option>
+      </select>
+      
+      <img id="graphique-1" src="assets/img/profilAriane.png"/>
+      
+      <script>
+          const selectEl = document.getElementById("toxicity-select");
+          selectEl.addEventListener("change", (ev) => {
+          switch (selectEl.value) {
+              case "insult":
+                <div class="row">
+                  <div class="column">
+                    <p align="center">
+                    <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-lite.png" alt="Snow" style="width:100%">
+                    <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%">
+                    </p>
+                  </div>
+                  <div class="column">
+                    <p align="center">
+                    <img width="200" src="assets/img/hex_plots_png/identity_attack_Control.png" alt="Snow" style="width:100%">
+                    <img width="200" src="assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png" alt="Snow" style="width:100%">        
+                    </p>
+                  </div>
+                </div>
+              break;
+              case "obscene":
+                <div class="row">
+                    <div class="column">
+                      <p align="center">
+                      <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-lite.png" alt="Snow" style="width:100%">
+                      <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%">
+                      </p>
+                    </div>
+                    <div class="column">
+                      <p align="center">
+                      <img width="200" src="assets/img/hex_plots_png/identity_attack_Control.png" alt="Snow" style="width:100%">
+                      <img width="200" src="assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png" alt="Snow" style="width:100%">        
+                      </p>
+                    </div>
+                  </div>          
+              break;
+              default:
+                <img id="graphique-1" src="assets/img/profilAriane.png" >
+              break;
+          }
+          })
+      </script>
+
       <p>It turns out that there is either no correlation (among correlation coefficients associated with 
         a p-values less than 0.05, we only have a correlation coefficient of 0.1) or a correlation similar 
         to the one in the control group (ex: correlation of 0.4 between <i>sexual_explicite</i> score and the view 
