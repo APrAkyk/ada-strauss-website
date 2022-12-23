@@ -4,11 +4,11 @@ layout: thanksstyle
 
 # Acknowledgement 
 
-We would like to thank [Manoel Ribeiro](https://manoelhortaribeiro.github.io/) for helping  his helpful remarks. We were able to successfully complete this project with his guidance and the data that he kindly shared with us. <br>  
+We would like to thank [Manoel Ribeiro](https://manoelhortaribeiro.github.io/) for his helpful remarks. We were able to successfully complete this project with his guidance and the data that he kindly shared with us. <br>  
 His paper was also very helpful to understand the data we were working on :  
 [YouNiverse: Large-Scale Channel and Video Metadatafrom English-Speaking YouTube](https://ojs.aaai.org/index.php/ICWSM/article/view/18125/17928)
 
-# Credential
+# Credentials
 
 YouNiverse dataset : [Youniverse](https://zenodo.org/record/4650046#.Y3eNQceZO3-)
 
