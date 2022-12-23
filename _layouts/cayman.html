@@ -116,7 +116,7 @@
 
 
 
-        
+
       <p>The pagerank coefficient was much higher than we expected. Looking at the distribution of the video’s coefficients, we notice these are exceptionally high values located in the tail. This would mean that the channels from extreme communities have a lot of influence</p>
       <p>However, people change so maybe looking at a range of data over several years wouldn’t be representative of how clustered these communities are.</p>
     
@@ -225,21 +225,23 @@
             data,
 
             options: {
+              scales: {
+                  y: {
+                    title: {
+                      display: true,
+                      text: 'Toxicity'
+                    }
+                  }
+              },
               plugins : {
                 legend : {
                   display : false
-                }
-              },
-
-            scales: {
-              y: {
-                beginAtZero: true,
-                scaleLabel: {
-                  display: true,
-                  labelString: 'toxicity'
-                }
+                },
+              title: {
+                display: true,
+                text: 'Toxicity of the monkey scale'
+                 }
               }
-            }
             }
           };
           
