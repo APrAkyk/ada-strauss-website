@@ -3,3 +3,4 @@ _site/
 .jekyll-metadata
 Gemfile.lock
 assets/code
+assets/graph/Hex_plots
