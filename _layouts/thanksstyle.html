@@ -11,7 +11,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
-
+  
+  <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script>
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="./styles.css">
   </head>
 
   <body>
@@ -199,7 +204,13 @@
       <div id="toxicity"><center><iframe src="assets/graph/Each_cat_tox/toxicity.html" height = "500", 
         width = "1000" frameBorder="0"> </iframe></center></div> 
     
-      
+      <script>
+              $(document).ready(function () {
+                $('#homePage').click(function () {
+                        $(this).load('home.html');
+              });
+      });
+      </script>
       <label for="toxicity-select">Choose a toxicity:</label>
       <select name="toxicity" id="toxicity-select">
           <option value="">Identity attack</option>
