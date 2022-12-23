@@ -245,14 +245,14 @@
       <div class="row">
         <div class="column">
           <p align="center">
-          <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-lite.png" alt="Snow" style="width:100%">
-          <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%">
+          <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-lite.png" alt="Snow" style="width:100%" id ="imageToToggle_1">
+          <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%" class = "imageToToggle_2">
           </p>
         </div>
         <div class="column">
           <p align="center">
-          <img width="200" src="assets/img/hex_plots_png/identity_attack_Control.png" alt="Snow" style="width:100%">
-          <img width="200" src="assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png" alt="Snow" style="width:100%">        
+          <img width="200" src="assets/img/hex_plots_png/identity_attack_Control.png" alt="Snow" style="width:100%" id = "imageToToggle_3">
+          <img width="200" src="assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png" alt="Snow" style="width:100%" id = "imageToToggle_4">        
           </p>
         </div>
       </div>
@@ -271,15 +271,33 @@
           selectEl.addEventListener("change", (ev) => {
           switch (selectEl.value) {
               case "insult":
-                <img id="graphique-1" width="500" src="assets/img/profilAriane.png"/>
+                <div class="row">
+                  <div class="column">
+                    <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-lite.png" alt="Snow" style="width:100%">
+                    <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img width="200" src="assets/img/hex_plots_png/identity_attack_Control.png" alt="Snow" style="width:100%">
+                    <img width="200" src="assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png" alt="Snow" style="width:100%">        
+                  </div>
+                </div>
               break;
               case "obscene":
-                <img width="500" src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%">
+                <div class="row">
+                    <div class="column">
+                      <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-lite.png" alt="Snow" style="width:100%">
+                      <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%">
+                    </div>
+                    <div class="column">
+                      <img width="200" src="assets/img/hex_plots_png/identity_attack_Control.png" alt="Snow" style="width:100%">
+                      <img width="200" src="assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png" alt="Snow" style="width:100%">        
+                    </div>
+                  </div>          
               break;
               default:
-                <img id="graphique-1" width="500" src="assets/img/profilAriane.png">
+                <img id="graphique-1" src="assets/img/profilAriane.png" >
               break;
-            }
+          }
           })
       </script>
 
@@ -761,6 +779,25 @@
 
     </main>
   </body>
+  <footer>
+    <script>
+      selectEl = document.getElementById("toxicity-select");
+      selectEl.addEventListener("change", (ev) => {
+      switch (selectEl.value) {
+          case "insult":
+            document.getElementById("imageToToggle_1").src = "uneimage.png"
+          break;
+          case "obscene":
+                     
+          break;
+          default:
+            
+          break;
+      }
+      })
+  </script>
+
+  </footer>
 
 
 </html>
