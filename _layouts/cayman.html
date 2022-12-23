@@ -41,6 +41,14 @@
     text-align:center;
     vertical-align: middle;
   }</style>
+
+  <style>
+    .sup {
+  position: relative;
+  bottom: 1ex; 
+  font-size: 80%;
+}
+  </style>
   </head>
 
   <body>
@@ -102,18 +110,25 @@
         <p>
         This way we’re able to quantify influence while taking into account the fact that some channels have more subscribers than others: if 
         channel A is more influential than channel B the edge from B to A would have more weight than the weight from A to B. Now that we’ve 
-        defined our graph, we’ll compute two coefficients : the centrality measure <a href="https://fr.wikipedia.org/wiki/PageRank"><b>page rank coefficient</b></a> (computed for a directed graph using 
-        this <a href="https://www.sciencedirect.com/science/article/abs/pii/S096007791730509X?via%3Dihub">paper</a>) and their <a href="https://en.wikipedia.org/wiki/Clustering_coefficient"><b>local clustering coefficient</b></a> (computed for our graph seen as undirected). The point of computing both the page rank 
+        defined our graph, we tried to compute two coefficients: their <a href="https://fr.wikipedia.org/wiki/PageRank"><b>page rank 
+          centrality measure</b></a> and 
+        their <a href="https://en.wikipedia.org/wiki/Clustering_coefficient"><b>local clustering coefficient</b></a> 
+        (computed for a directed graph using 
+        this <a href="https://www.sciencedirect.com/science/article/abs/pii/S096007791730509X?via%3Dihub">paper</a>). The point of computing both the page rank 
         and the local clustering coefficient is that it would allow us to compare how influential a channel is among all other channels versus 
-        how influential it is among its network. 
+        how influential it is among its local neighbours. 
         </p>
       
-    <h3>How tight knit are our extreme communities?</h3>
+    <h3>How influential are our extreme communities?</h3>
 
       <p>We would expect the channels associated with extreme communities to have a higher local clustering coefficient than the average and a 
         lower page rank coefficient than the average (as we would expect them to be tight knit). We didn’t have time and the resource, and we underestimated 
         the size of our data to compute the local clustering coefficient but we did have time to compute the pagerank coefficient for the whole video set and for the time window restriction.</p>
-      <p>We found an <b>average pagerank coefficient of ~1.10</b> for the community <b>Alt-right</b>, of <b>~4.85</b> for the community <b>Alt-lite</b> and of <b>~3.20</b> for the 
+        <p>This is due to the fact that the naive complexity for the referenced local clustering coefficient is O(N<span class=sup>3</span>). 
+          This can be sped up using faster matrix multiplications but it would still take a long time/cost too much due to the fact 
+          that N here represents a channel count (136470). Which is around 10<span class=sup>15</span> naively and 10<span class=sup>12</span> optimized multiply sum computations. 
+        </p>
+        <p>We found an <b>average pagerank coefficient of ~1.10</b> for the community <b>Alt-right</b>, of <b>~4.85</b> for the community <b>Alt-lite</b> and of <b>~3.20</b> for the 
         community <b>IDW</b> versus a pagerank coefficient of <b>~0.48</b> for the <b>whole channel set</b>. </p>
 
         <p align="center">
@@ -174,7 +189,7 @@ However, people change so maybe looking at a range of data over several years wo
 
       <p>We notice that these coefficients slightly decreased for the whole video set but considerably increased for the channels associated with extreme communities.This clearly shows that right wing channels rapidly grew in influence on YouTube in the 2018-2019 period compared to 2004-2019. Directly these numbers show that either communities from many other channels started following right wing ones or that there are many more active channels of interest and they share a large amount of audience. In reality it’s probably a mix of both.
       </p>
-
+      <p>In order to properly analyze the source of this rank increase a local clustering coefficient would be needed in order to identify whether there’s a lot more interactions inside the communities of interest or if those communities cross spread into other parts of YouTube.</p>
     <h3>Discussion</h3>
 
       <p>When comparing the two clustering coefficients of extreme communities versus non-extreme communities, we didn’t take into consideration the number of the commentators on each channel. For a more rigorous analysis, we could do a matching based on this number between an extreme community channel and a random video and compute the averages on this set. 
@@ -184,7 +199,11 @@ However, people change so maybe looking at a range of data over several years wo
 
     <h3>Quick summary</h3>
 
-      <p>We defined a directed weighted graph using youtube channels as nodes and could only compute the (directed) pagerank clustering coefficient for each node. We found that the extreme communities had a considerably higher coefficient compared to the whole dataset and that gap difference only increased when we restricted our time window and only took data on a one year interval. This could be consistent with the hypothesis that young people are attracted by far right content and get involved a lot in these communities but hopefully only during a short period of time (not on a long term basis). </p>
+      <p>We defined a directed weighted graph using youtube channels as nodes and could only compute the pagerank 
+        coefficient for each node. We found that the extreme communities had a considerably higher coefficient compared to the 
+        whole dataset and that gap difference only increased when we restricted our time window and only took data on a one year interval. 
+        This could be consistent with the hypothesis that young people are attracted by far right content and get involved a lot in these 
+        communities but hopefully only during a short period of time (not on a long term basis). </p>
 
 
     <h2>Toxicity</h2>
