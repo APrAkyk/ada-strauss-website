@@ -240,33 +240,33 @@
         using Pearson’s (for linear correlation), Spearman’s (for monotonic correlation) and Kendall Tau’s 
         (for class correlation) correlation coefficient and their associated p-values. </p>
       
-      <b>PLOT GRAPH (2)</b>
+        <label for="pet-select">Choose a pet:</label>
+        <select name="pets" id="pet-select">
+            <option value="">--Please choose an option--</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+        </select>
+        
+        <img id="graphique-1" src="../assets/img/profilAriane.png" />
+        
+        <script>
+            const selectEl = document.getElementById("pet-select");
+            selectEl.addEventListener("change", (ev) => {
+            switch (selectEl.value) {
+                case "dog":
+                document.getElementById("graphique-1").src = "../assets/img/favicon.png";
+                break;
+                case "cat":
+                document.getElementById("graphique-1").src = "../assets/img/favicon.png";
+                break;
+                default:
+                document.getElementById("graphique-1").src="../assets/img/profilAriane.png";
+                break;
+            }
+            })
+        </script>
 
-      <label for="toxicity-select-hex">Choose a toxicity:</label>
-      <select name="toxicity-hex" id="toxicity-select-hex">
-          <option value="">Identity attack</option>
-          <option value="insult">Insult</option>
-          <option value="obscene">Obscene</option>
-      </select>
       
-      <img id="graphique-1" src="../assets/img/profilAriane.png"/>
-      
-      <script>
-          const selectEl = document.getElementById("toxicity-select-hex");
-          selectEl.addEventListener("change", (ev) => {
-          switch (selectEl.value) {
-              case "insult":
-                <img id="graphique-1" src="../assets/img/hex_plots_png/insult.png">
-              break;
-              case "obscene":
-                <img id="graphique-1" src="../assets/img/hex_plots_png/obcene.png"/>
-              break;
-              default:
-                <img id="graphique-1" src="../assets/img/profilAriane.png" >
-              break;
-          }
-          })
-      </script>
       
 
       <div class="row">
