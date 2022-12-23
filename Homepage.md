@@ -1,6 +1,6 @@
 ---
 layout: homepage
-title: Strauss project
+title: "Strauss project : YouTube’s Toxic Rabbit Holes"
 ---
 
 # Introduction
