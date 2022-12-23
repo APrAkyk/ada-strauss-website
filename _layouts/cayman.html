@@ -113,8 +113,8 @@
       <p>We would expect the channels associated with extreme communities to have a higher local clustering coefficient than the average and a 
         lower page rank coefficient than the average (as we would expect them to be tight knit). We didn’t have time and the resource, and we underestimated 
         the size of our data to compute the local clustering coefficient but we did have time to compute the pagerank coefficient for the whole video set and for the time window restriction.</p>
-      <p>We found an <b>average pagerank coefficient of ~1.10</b> for the community <b>Alt-right</b>, of <b>~4.85</b> for the community <b>Alt-lite</b> and of <b>3.20</b> for the 
-        community <b>IDW</b> versus a pagerank coefficient of <b>0.48</b> for the <b>whole channel set</b>. </p>
+      <p>We found an <b>average pagerank coefficient of ~1.10</b> for the community <b>Alt-right</b>, of <b>~4.85</b> for the community <b>Alt-lite</b> and of <b>~3.20</b> for the 
+        community <b>IDW</b> versus a pagerank coefficient of <b>~0.48</b> for the <b>whole channel set</b>. </p>
 
         <p align="center">
         <table >
@@ -139,7 +139,7 @@
           <i>Table of the average pagerank coefficient of the 4 considered communities</i>
         </p>
 
-      <p>The pagerank coefficient was much higher than we expected. Looking at the distribution of the video’s coefficients, we notice these are exceptionally high values located in the tail. This would mean that the channels from extreme communities have a lot of influence</p>
+      <p>The pagerank coefficient was much higher than we expected. Looking at the distribution of the video’s coefficients, we notice these are exceptionally high values located in the tail. This would mean that the channels from extreme communities have a lot of influence.</p>
       <p>However, people change so maybe looking at a range of data over several years wouldn’t be representative of how clustered these communities are.</p>
     
     <h3>How do our clustering coefficients vary when we consider a shorter time window?</h3>
@@ -179,7 +179,7 @@
        When computing our clustering coefficients, we didn’t take into account edges that had a weight of less than 0.01 so there are a lot of channels associated with an extreme community that didn’t get taken into consideration.  
       </p>
 
-    <h2>Quick summary</h2>
+    <h3>Quick summary</h3>
 
       <p>We defined a directed weighted graph using youtube channels as nodes and could only compute the (directed) pagerank clustering coefficient for each node. We found that the extreme communities had a considerably higher coefficient compared to the whole dataset and that gap difference only increased when we restricted our time window and only took data on a one year interval. This could be consistent with the hypothesis that young people are attracted by far right content and get involved a lot in these communities but hopefully only during a short period of time (not on a long term basis). </p>
 
@@ -797,8 +797,14 @@
       be ground for further research. 
       </p>
     
-    <h2>Quick summary</h2>
-    <p>Overall on average, videos associated with extreme communities have a higher toxic category score 
+    <h1>Conclusion</h1>
+    <p>
+      We found that the extreme communities had a considerably higher coefficient compared to the whole dataset, meaning that the far-right 
+      channels tend to have more activity that the other ones. <br>
+      It is therefore interesting to look at these communities, and in particular at one of their supposed characteristics: their toxicity. 
+      With this study, it’s possible to have an answer to the question <i>“Is it true that these channels are more toxic than others?”</i>.
+      
+      Overall on average, videos associated with extreme communities have a higher toxic category score 
       than the ones associated with the control group but still have a relatively small score (around 0.2). 
       When looking at the evolution of the toxicity category scores through time per group, we find again 
       that the absolute differences seem negligible. We could assume some hypotheses about the reasons for 
@@ -820,7 +826,6 @@
       is used, or when a sensitive couple of words is written together.
       </p>
     
-    <h1>Conclusion</h1>
 
 
 </html>
