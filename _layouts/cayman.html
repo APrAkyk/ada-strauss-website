@@ -223,12 +223,8 @@
       <div id="toxicity"><center><iframe src="assets/graph/Each_cat_tox/toxicity.html" height = "500", 
         width = "1000" frameBorder="0"> </iframe></center></div> 
       
-      <img width="200" src="assets/img/hex_plots_png/identity_attack_Control.png" alt="Snow" style="width:100%" id = "imageToToggle_3">
-      <img width="200" src="assets/img/hex_plots_png/identity_attack_Intellectual Dark Web.png" alt="Snow" style="width:100%" id = "imageToToggle_4">      
-      <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-lite.png" alt="Snow" style="width:100%" id ="imageToToggle_1">
-      <img width="200" src="assets/img/hex_plots_png/identity_attack_Alt-right.png" alt="Snow" style="width:100%" class = "imageToToggle_2">
       
-      <label for="pet-select">Choose a toxic category</label>
+      <label for="pet-select">Choose a toxic category GRAPHICH</label>
       <select name="pets" id="pet-select">
           <option value="">Identity attack</option>
           <option value="insult">Insult</option>
@@ -238,31 +234,31 @@
           <option value="threat">Threat</option>
           <option value="toxicity">Toxicity</option>
       </select>
-
+      
       <script>
         selectEl = document.getElementById("toxicity-select");
         selectEl.addEventListener("change", (ev) => {
         switch (selectEl.value) {
           case "insult":
-                  document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
+                  document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html">";
                 break;
                 case "obscene":
-                  document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
+                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html">";
                 break;
                 case "severe":
-                document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
+                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html">";
                 break;
                 case "sexual":
-                document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
+                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html">";
                 break;
                 case "threat":
-                document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
+                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html">";
                 break;
                 case "toxicity":
-                document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
+                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html">";
                 break;
                 default:
-                document.getElementbyId("identity_attack").innerHTML = "assets/graph/Each_cat_tox/identity_attack.html";
+                document.getElementbyId("identity_attack").innerHTML = "<iframe src="assets/graph/Each_cat_tox/identity_attack.html">";
                 break;
         }
         })
