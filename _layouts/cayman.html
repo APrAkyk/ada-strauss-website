@@ -68,6 +68,7 @@
       </p>
 
       <h1>In the universe of Youtube</h1>
+      <h2>Clustering</h2>
 
       <p align="center">
           <img width="500" src="https://blog.diegovalle.net/images/blogger_images/2.bp.blogspot.com_-vnzgFLAoZuE_VNgQ4jE_JnI_AAAAAAAAI60_YOjJurv4NMk_s1600_prd.png" >
@@ -75,6 +76,10 @@
       
       <p align="center">
           <a href="https://blog.diegovalle.net/2015/02/the-most-partisan-first-names.html"><i>Is it me or is it hot in here?</i></a>
+      </p>
+
+      <p align="center">
+        <i>TITLE</i>
       </p>
 
       <p>Our goal in this part is to compute how tight knit the extreme communities <b>Alt-lite</b>, <b>IDW</b> and <b>Alt-right</b> are. To this end, we’ll define 
@@ -87,7 +92,11 @@
         user and a channel if the user has commented on a video that was published by that channel.</p> 
         <p align="center">
           <img width="225" title="Bipartite graph for the authors and channels for the Youniverse dataset" src="assets/img/bipartite.png" >
-      </p>
+        </p>
+
+        <p align="center">
+          <i>Bipartite graph for the authors and channels for the Youniverse dataset</i>>
+        </p>
       <p>
         Then we collapsed the bipartite graph by only 
         keeping the nodes corresponding to channels and drawing an edge between two nodes if they were connected to the same user in the bipartite
@@ -96,6 +105,11 @@
         <p align="center">
           <img width="400" title="Directed weighted graphic" src="assets/img/directed_graph.png" >
         </p>
+
+        <p align="center">
+          <i>Directed weighted graphic example</i>>
+        </p>
+
         <p>
         This way we’re able to quantify influence while taking into account the fact that some channels have more subscribers than others: if 
         channel A is more influential than channel B the edge from B to A would have more weight than the weight from A to B. Now that we’ve 
@@ -113,7 +127,8 @@
       <p>We found an <b>average pagerank coefficient of ~1.10</b> for the community <b>Alt-right</b>, of <b>~4.85</b> for the community <b>Alt-lite</b> and of <b>3.20</b> for the 
         community <b>IDW</b> versus a pagerank coefficient of <b>0.48</b> for the <b>whole channel set</b>. </p>
 
-        <table class="center">
+        <p align="center">
+        <table >
 
           <tr>
             <td rowspan="2">Average Pagerank coefficient</td>
@@ -130,6 +145,10 @@
             <td>~0.48</td>
           </tr>
         </table>
+        </p>
+        <p align="center">
+          <i>Table of the average pagerank coefficient of the 4 considered communities</i>>
+        </p>
 
       <p>The pagerank coefficient was much higher than we expected. Looking at the distribution of the video’s coefficients, we notice these are exceptionally high values located in the tail. This would mean that the channels from extreme communities have a lot of influence</p>
       <p>However, people change so maybe looking at a range of data over several years wouldn’t be representative of how clustered these communities are.</p>
@@ -138,25 +157,29 @@
       
       <p>In a second time we’re only considering comments that have been made between 2018 and 2019 (we would expect if a clustered community is still alive that its members have commented during that time on all the community’s trending channels) and computing the pagerank cluster coefficients on this dataset. We get the following results: </p>
 
+      <p align="center">
+        <table class="center">
+
+          <tr>
+            <td rowspan="2">Pagerank coefficient</td>
+            <td>Alt-lite</td>
+            <td>Alt-right</td>
+            <td>IDW</td>
+            <td>whole video set</td>
+          </tr>
+          <tr>
+            <td>6.12</td>
+
+            <td>1.43</td>
+            <td>4.01</td>
+            <td>0.43</td>
+          </tr>
+        </table>
       </p>
-
-      <table class="center">
-
-        <tr>
-          <td rowspan="2">Pagerank coefficient</td>
-          <td>Alt-lite</td>
-          <td>Alt-right</td>
-          <td>IDW</td>
-          <td>whole video set</td>
-        </tr>
-        <tr>
-          <td>6.12</td>
-
-          <td>1.43</td>
-          <td>4.01</td>
-          <td>0.43</td>
-        </tr>
-      </table>
+      
+      <p align="center">
+        <i>Table of the pagerank coefficient of the 4 considered communities</i>>
+      </p>
 
       <p>We notice that these coefficients slightly decreased for the whole video set but considerably increased for the channels associated with extreme communities. This could mean that people don’t stay long in extreme communities but when they are part of it, they are very involved. </p>
 
@@ -172,13 +195,13 @@
       <p>We defined a directed weighted graph using youtube channels as nodes and could only compute the (directed) pagerank clustering coefficient for each node. We found that the extreme communities had a considerably higher coefficient compared to the whole dataset and that gap difference only increased when we restricted our time window and only took data on a one year interval. This could be consistent with the hypothesis that young people are attracted by far right content and get involved a lot in these communities but hopefully only during a short period of time (not on a long term basis). </p>
 
 
-
+    <h2>Toxicity</h2>
 
       <p align="center">
         <img width="500" src="assets/img/toxic_behaviour.png" >
       </p>
       <p align="center">
-        <a href="https://www.pinterest.fr/pin/551761391849970879/">Source</a>
+        <i>TITLE ??</i> <a href="https://www.pinterest.fr/pin/551761391849970879/">Source</a>
       </p>
 
       
@@ -188,7 +211,7 @@
         <img width="500" src="assets/img/trump.png" >
       </p>
       <p align="center">
-        <a href="https://twitter.com/realDonaldTrump/status/332308211321425920">Twitter</a>
+        <i>Tweet of Donald Trump on <a href="https://twitter.com/realDonaldTrump/status/332308211321425920">Twitter</a> on the 9th of May 2013</i>
       </p>
       
       
@@ -202,6 +225,7 @@
           your perspective’</i>. <br>
         For example Trump’s tweet had a score of :
         </p>
+        <p align="center">
         <table class="tb" id="members">
           <tr>
             <th>Toxicity</th>
@@ -222,6 +246,11 @@
             <th>0.000622</th>
           </tr>
         </table>
+      </p>
+
+      <p align="center">
+        <i>Toxicity categories of Trump's tweet</i>
+      </p>
         
         <p>It has a toxicity of ~0.994 and is very insulting (insult~0.988). <br>
         To get a better idea of what toxicity score is associated with what type of sentence, we're introducing the monkey scale:</p>
@@ -384,6 +413,10 @@
             })
         </script>
 
+      <p align="center">
+        <i>Scatter plot of the toxic category score and the view count associated with the videos.</i>
+      </p>
+
       <table >
           <td style="text-align: center" colspan="7">Alt lite</td>
           <tr>
@@ -405,6 +438,10 @@
             <th>Spearman 0.489</th>
           </tr>
       </table>
+
+      <p align="center">
+        <i>Toxicity categories of the channels for <b>Alt lite</b></i>
+      </p>
 
       <table >
           <td style="text-align: center" colspan="7">ALt right</td>
@@ -428,6 +465,10 @@
           </tr>
       </table>
 
+      <p align="center">
+        <i>Toxicity categories of the channels for <b>Alt right</b></i>
+      </p>
+
       <table >
           <td style="text-align: center" colspan="7">Intellectual Dark Web</td>
           <tr>
@@ -450,6 +491,10 @@
           </tr>
       </table>
 
+      <p align="center">
+        <i>Toxicity categories of the channels for <b>Intellectual Dark Web</b></i>
+      </p>
+
       <table >
           <td style="text-align: center" colspan="7">Control</td>
           <tr>
@@ -471,6 +516,10 @@
             <th>Spearman 0.406</th>
           </tr>
       </table>
+
+      <p align="center">
+        <i>Toxicity categories of the channels for <b>Control</b></i>
+      </p>
 
       <p>It turns out that there is either no correlation (among correlation coefficients associated with 
         a p-values less than 0.05, we only have a correlation coefficient of 0.1) or a correlation similar 
@@ -507,6 +556,10 @@
           </tr>
       </table>
 
+      <p align="center">
+        <i>Toxicity categories of the videos for <b>Alt lite</b></i>
+      </p>
+
       <table >
           <td style="text-align: center" colspan="7">ALt right</td>
           <tr>
@@ -528,6 +581,10 @@
             <th>Pearson   0.7</th>
           </tr>
       </table>
+
+      <p align="center">
+        <i>Toxicity categories of the videos for <b>Alt right</b></i>
+      </p>
 
       <table >
           <td style="text-align: center" colspan="7">Intellectual Dark Web</td>
@@ -551,6 +608,10 @@
           </tr>
       </table>
 
+      <p align="center">
+        <i>Toxicity categories of the videos for <b>Intellectual Dark Web</b></i>
+      </p>
+
       <table >
           <td style="text-align: center" colspan="7">Control</td>
           <tr>
@@ -572,6 +633,10 @@
             <th> - </th>
           </tr>
       </table>
+
+      <p align="center">
+        <i>Toxicity categories of the videos for <b>Control</b></i>
+      </p>
 
       <p>
         Videos in <b>Alt right</b> and <b>IDW</b> have medium correlation coefficients between their view count and their 
@@ -604,7 +669,7 @@
 
       
       <p align="center">
-        <img width="500" src="assets/img/ford.png" >
+        <img width="650" src="assets/img/ford.png" >
       </p>
       <p align="center">
         <a href="https://www.forbes.com/sites/kalevleetaru/2018/07/19/is-social-media-becoming-too-toxic/">Is social media becoming too toxic ?</a>
@@ -691,6 +756,7 @@
       The same way, a comment is considered obscene if you use a swear word even in a positive way. For example the sentence <i>“that was fucking brilliant”</i> has an obscene score of ~0.95.
       </p>
 
+    <p align="center">
     <table class="tb" id="members">
       <tr>
         <th>Toxicity</th>
@@ -711,6 +777,11 @@
         <th>0.026361</th>
       </tr>
     </table> 
+    </p>
+
+    <p align="center">
+      <i>Toxicity categories of the associated comment section</i>
+    </p>
 
     <p>This raises the questions: 
       <p align="center" style="color :rgb(187, 11, 240); ">
