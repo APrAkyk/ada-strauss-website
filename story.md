@@ -1,6 +1,6 @@
 ---
 layout: cayman
-title: Strauss project
+title: "Strauss project : YouTube’s Toxic Rabbit Holes"
 ---
 
 # Toxicity

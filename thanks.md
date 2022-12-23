@@ -1,5 +1,6 @@
 ---
 layout: thanksstyle
+title: "Strauss project : YouTube’s Toxic Rabbit Holes"
 ---
 
 # Acknowledgement 
