@@ -301,69 +301,7 @@
 
       <div id="identity_attack"><center><iframe src="assets/graph/Histograms/final.html" height = "500", 
         width = "1000" frameBorder="0"> </iframe></center></div>
-      
-      <div id="insult"><center><iframe src="assets/graph/Each_cat_tox/insult.html" height = "500", 
-        width = "1000" frameBorder="0"> </iframe></center></div>
-
-      <div id="obscene"><center><iframe src="assets/graph/Each_cat_tox/obscene.html" height = "500", 
-        width = "1000" frameBorder="0"> </iframe></center></div> 
-        
-      <div id="severe_toxicity"><center><iframe src="assets/graph/Each_cat_tox/severe_toxicity.html" height = "500", 
-        width = "1000" frameBorder="0"> </iframe></center></div>
-      
-      <div id="sexual_explicit"><center><iframe src="assets/graph/Each_cat_tox/sexual_explicit.html" height = "500", 
-        width = "1000" frameBorder="0"> </iframe></center></div>
-      
-      <div id="threat"><center><iframe src="assets/graph/Each_cat_tox/threat.html" height = "500", 
-        width = "1000" frameBorder="0"> </iframe></center></div>
-
-      <div id="toxicity"><center><iframe src="assets/graph/Each_cat_tox/toxicity.html" height = "500", 
-        width = "1000" frameBorder="0"> </iframe></center></div> 
-      
-      <p>dsjfidjfs</p>
-
-        <iframe src="assets/graph/Each_cat_tox/toxicity.html" height = "500", 
-        width = "1000" frameBorder="0"> </iframe>
-
-      <label for="pet-select">Choose a toxic category GRAPHICH</label>
-      <select name="pets" id="pet-select">
-          <option value="">Identity attack</option>
-          <option value="insult">Insult</option>
-          <option value="obscene">Obscene</option>
-          <option value="severe">Severe toxicity</option>
-          <option value="sexual">Sexual explicit</option>
-          <option value="threat">Threat</option>
-          <option value="toxicity">Toxicity</option>
-      </select>
-      
-      <script>
-        selectEl = document.getElementById("toxicity-select");
-        selectEl.addEventListener("change", (ev) => {
-        switch (selectEl.value) {
-          case "insult":
-                  document.getElementbyId("identity_attack").innerHTML = "<iframe src='assets/graph/Each_cat_tox/identity_attack.html'></iframe>";
-                break;
-                case "obscene":
-                document.getElementbyId("identity_attack").innerHTML = "<iframe src='assets/graph/Each_cat_tox/identity_attack.html'></iframe>;";
-                break;
-                case "severe":
-                document.getElementbyId("identity_attack").innerHTML = "<iframe src='assets/graph/Each_cat_tox/identity_attack.html'></iframe>";
-                break;
-                case "sexual":
-                document.getElementbyId("identity_attack").innerHTML = "<iframe src='assets/graph/Each_cat_tox/identity_attack.html'></iframe>";
-                break;
-                case "threat":
-                document.getElementbyId("identity_attack").innerHTML = "<iframe src='assets/graph/Each_cat_tox/identity_attack.html'></iframe>";
-                break;
-                case "toxicity":
-                document.getElementbyId("identity_attack").innerHTML = "<iframe src='assets/graph/Each_cat_tox/identity_attack.html'>";
-                break;
-                default:
-                document.getElementbyId("identity_attack").innerHTML = "<iframe src='assets/graph/Each_cat_tox/identity_attack.html'>";
-                break;
-        }
-        })
-      </script>
+    
 
       <p>For the other toxic categories, we notice that the toxic category score distribution has a 
         larger proportion of videos associated with higher scores for the toxic categories <b>obscene</b>, 
@@ -522,7 +460,8 @@
         the various correlation coefficients.
       </p>
 
-      <b>PLOT GRAPH (2)</b>
+      <div id="identity_attack"><center><iframe src="assets/graph/Scatter_views_videos/final.html" height = "500", 
+        width = "1000" frameBorder="0"> </iframe></center></div>
 
       <table >
           <td style="text-align: center" colspan="7">Alt lite</td>
@@ -629,7 +568,8 @@
       
       <p>Again we computed the scatter plots and the correlation coefficients : </p>
 
-      <b>PLOT GRAPH (1)</b>
+      <div id="identity_attack"><center><iframe src="assets/graph/Scatter_views_channels/final.html" height = "500", 
+        width = "1000" frameBorder="0"> </iframe></center></div>
 
       <p>In this case, we noticed that all numbers and behavior coincide with the one of the control group 
         so it is not related to them being extreme communities. 
@@ -660,8 +600,9 @@
         We first compared them to each other: 
         </p>
 
-      <b>PLOT GRAPH (1)</b>
-
+        <div id="identity_attack"><center><iframe src="assets/graph/Each_cat_tox/final.html" height = "500", 
+          width = "1000" frameBorder="0"> </iframe></center></div>
+          
       <p>As before, the subcategories <i>‘severe toxicity’</i>, <i>‘threat’</i> and <i>‘sexual explicit’</i> 
          have a very small scale throughout the time so their effect is negligible for each group. Furthermore, 
         concerning the other toxic categories, the toxic category scores associated with the <b>Alt-lite</b>  channel 
@@ -673,8 +614,9 @@
         we’re computing if it has always been the case. 
         </p>
 
-      <b>PLOT GRAPH (1)</b>
-      
+        <div id="identity_attack"><center><iframe src="assets/graph/Each_chan_cat/final.html" height = "500", 
+          width = "1000" frameBorder="0"> </iframe></center></div>     
+
       <p>On the graphs, we see that three toxic categories stand out: <i>toxicity</i>, <i>insult</i> and 
         <i>obscene</i>. 
         The fact that toxicity stands out makes sense as all the other toxic categories are defined as 
@@ -694,8 +636,12 @@
         reflects in numbers throughout time.
         </p>
 
-      <b>PLOT GRAPH (2)</b>
-    
+        <div id="identity_attack"><center><iframe src="assets/graph/Each_cat_tox/final.html" height = "500", 
+          width = "1000" frameBorder="0"> </iframe></center></div>  
+          
+        <div id="identity_attack"><center><iframe src="assets/graph/Each_chan_cat/final.html" height = "500", 
+          width = "1000" frameBorder="0"> </iframe></center></div>  
+
     <p>The top 25 videos usually have the same or a noticeably higher mean than the overall mean of 
       their corresponding category. This is most detectable in the <b>Alt-lite</b> community. However, the reverse 
       happens in the control group. Indeed, after mid 2015, the most viewed videos are less toxic than the 
