@@ -81,22 +81,90 @@
       <p>To do so, we first defined a bipartite graph where one part represents users, the other part channels, and an edge is drawn between a 
         user and a channel if the user has commented on a video that was published by that channel.</p> 
         <p align="center">
-          <img width="500" title="Bipartite graph for the authors and channels for the Youniverse dataset" src="assets/img/bipartite.png" >
+          <img width="275" title="Bipartite graph for the authors and channels for the Youniverse dataset" src="assets/img/bipartite.png" >
       </p>
       <p>
         Then we collapsed the bipartite graph by only 
         keeping the nodes corresponding to channels and drawing an edge between two nodes if they were connected to the same user in the bipartite
          graph. Since we were interested in how influential channels are, we turned the undirected edges into double directed edges and associated
-          each edge to a weight: the proportion of people who commented on one channel who also commented on the other channel. <br><br> 
-        E.g if we have the channels A and B, A<->B became A-><-B and the left to right edge had weight “proportion of commentators of channel A 
-        who also commented on channel B”. <br> <br>   
-        This way we’re able to quantify influence while taking into account the fact that some channels have more subscribers than others: if channel A is more influential than channel B the edge from B to A would have more weight than the weight from A to B. Now that we’ve defined our graph, we’ll compute two clustering coefficients: their page rank coefficient (computed for a directed graph using this paper) and their local clustering coefficient (computed for our graph seen as undirected). The point of computing both the page rank and the local clustering coefficient is that it would allow us to compare how influential a channel is among all other channels versus how influential it is among its network. 
+          each edge to a weight: the proportion of people who commented on one channel who also commented on the other channel. </p>
+        <p align="center">
+          <img width="275" title="Directed weighted graphic" src="assets/img/directed_graph.png" >
+        </p>
+        <p>
+        This way we’re able to quantify influence while taking into account the fact that some channels have more subscribers than others: if 
+        channel A is more influential than channel B the edge from B to A would have more weight than the weight from A to B. Now that we’ve 
+        defined our graph, we’ll compute two clustering coefficients: their <a href="https://fr.wikipedia.org/wiki/PageRank"><b>page rank coefficient</b></a> (computed for a directed graph using 
+        this <a href="https://www.sciencedirect.com/science/article/abs/pii/S096007791730509X?via%3Dihub">paper</a>) and their <a href="https://en.wikipedia.org/wiki/Clustering_coefficient"><b>local clustering coefficient</b></a>(computed for our graph seen as undirected). The point of computing both the page rank 
+        and the local clustering coefficient is that it would allow us to compare how influential a channel is among all other channels versus 
+        how influential it is among its network. 
         </p>
       
     <h3>How tight knit are our extreme communities?</h3>
 
-      <p>We would expect the channels associated with extreme communities to have a higher local clustering coefficient than the average and a lower page rank coefficient than the average (as we would expect them to be tight knit). We didn’t have time/the resource/underestimated the size of our data to compute the local clustering coefficient but we did have time to compute the pagerank coefficient for the whole video set and for the time window restriction.</p>
-      <p>We found an average pagerank coefficient of ~1.10 for the community Alt-right, of ~4.85 for the community Alt-lite and of 3.20 for the community IDW versus a pagerank coefficient of 0.48 for the whole channel set. </p>
+      <p>We would expect the channels associated with extreme communities to have a higher local clustering coefficient than the average and a 
+        lower page rank coefficient than the average (as we would expect them to be tight knit). We didn’t have time and the resource, and we underestimated 
+        the size of our data to compute the local clustering coefficient but we did have time to compute the pagerank coefficient for the whole video set and for the time window restriction.</p>
+      <p>We found an <b>average pagerank coefficient of ~1.10</b>for the community <b>Alt-right</b>, of ~4.85 for the community Alt-lite 
+        and of 3.20 for the 
+        community IDW versus a pagerank coefficient of 0.48 for the whole channel set. </p>
+
+
+        <div class="chartMenu">
+        </div>
+        <div class="chartCard">
+          <div class="chartBox">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+        // setup 
+        const data = {
+          labels: ['Alt-right', 'Alt-lite', 'IDW','whole channel set'],
+          datasets: [{
+            label: 'pagerank',
+            data: [0.080424, 0.158876, 0.197954],
+            backgroundColor: ['rgba(255, 26, 104, 0.2)',],
+            borderColor: ['rgba(255, 26, 104, 1)',],
+            borderWidth: 1
+          }]
+        };
+        // config 
+        const config = {
+          type: 'bar',
+
+          data,
+
+          options: {
+            plugins : {
+              legend : {
+                display : false
+              }
+            },
+
+          scales: {
+            y: {
+              beginAtZero: true,
+              scaleLabel: {
+                display: true,
+                labelString: 'toxicity'
+              }
+            }
+          }
+          }
+        };
+        
+        // render init block
+        const myChart = new Chart(
+          document.getElementById('myChart'),
+          config
+        );
+    
+    </script>
+
+
+
       <p>The pagerank coefficient was much higher than we expected. Looking at the distribution of the video’s coefficients, we notice these are exceptionally high values located in the tail. This would mean that the channels from extreme communities have a lot of influence</p>
       <p>However, people change so maybe looking at a range of data over several years wouldn’t be representative of how clustered these communities are.</p>
     
