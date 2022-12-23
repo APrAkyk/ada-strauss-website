@@ -13,11 +13,11 @@ Doing so, we would like to see if these channels generate more toxic behavior an
 To study far-right wing channels on Youtube, our study will be based on the data and the results coming from Ribeiro et al. (2020) study. The studied channels are broadly classified into four types: Media (the control group), the Alt-lite, the Intellectual Dark Web (I.D.W) and the Alt-right. 
 
 <p align="center">
-    <img width="500" src="assets/img/graph_intro.png" >
+    <img width="500" src="https://blog.diegovalle.net/images/blogger_images/2.bp.blogspot.com_-vnzgFLAoZuE_VNgQ4jE_JnI_AAAAAAAAI60_YOjJurv4NMk_s1600_prd.png" >
 </p>
 
 <p align="center">
-    <a href="https://medium.com/2key/thegraph-how-to-build-our-subgraph-on-thegraph-hosted-solution-2360938c0323"><i>Is it me or is it hot in here?</i></a>
+    <a href="https://blog.diegovalle.net/2015/02/the-most-partisan-first-names.html"><i>Is it me or is it hot in here?</i></a>
 </p>
 
 Our goal in this part is to compute how tight knit the extreme communities Alt-lite, IDW and Alt-right are. To this end, we’ll define a graph where the nodes represent youtube channels (not necessarily associated to extreme communities) and edges represent their influence on each other. We’ll then compute cluster coefficient to quantify the influence of the channels on each other.
