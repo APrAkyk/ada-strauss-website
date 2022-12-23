@@ -105,7 +105,7 @@
       <p>We would expect the channels associated with extreme communities to have a higher local clustering coefficient than the average and a 
         lower page rank coefficient than the average (as we would expect them to be tight knit). We didn’t have time and the resource, and we underestimated 
         the size of our data to compute the local clustering coefficient but we did have time to compute the pagerank coefficient for the whole video set and for the time window restriction.</p>
-      <p>We found an <b>average pagerank coefficient of ~1.10</b> for the community <b>Alt-right</b>, of <b>~4.85</b>~4.85 for the community<b>Alt-lite</b> and of <b>3.20</b> for the 
+      <p>We found an <b>average pagerank coefficient of ~1.10</b> for the community <b>Alt-right</b>, of <b>~4.85</b> for the community <b>Alt-lite</b> and of <b>3.20</b> for the 
         community <b>IDW</b> versus a pagerank coefficient of <b>0.48</b> for the <b>whole channel set</b>. </p>
 
       <p>The pagerank coefficient was much higher than we expected. Looking at the distribution of the video’s coefficients, we notice these are exceptionally high values located in the tail. This would mean that the channels from extreme communities have a lot of influence</p>
@@ -117,6 +117,64 @@
 
       <p>PRESENT result : page rank: Alt-lite 6.12, for Alt-right 1.43, for IDW 4.01 for the whole video set 0.43.
       </p>
+
+      <div class="chartMenu">
+        <p>WWW.CHARTJS3.COM (Chart JS 4.1.1)</p>
+      </div>
+      <div class="chartCard">
+        <div class="chartBox">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+      // setup 
+      const data = {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          label: 'Weekly Sales',
+          data: [18, 12, 6, 9, 12, 3, 9],
+          backgroundColor: [
+            'rgba(255, 26, 104, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(0, 0, 0, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 26, 104, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+            'rgba(0, 0, 0, 1)'
+          ],
+          borderWidth: 1
+        }]
+      };
+  
+      // config 
+      const config = {
+        type: 'bar',
+        data,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      };
+  
+      // render init block
+      const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+      );
+      </script>
 
       <p>We notice that these coefficients slightly decreased for the whole video set but considerably increased for the channels associated with extreme communities. This could mean that people don’t stay long in extreme communities but when they are part of it, they are very involved. </p>
 
