@@ -342,7 +342,7 @@
         using Pearson’s (for linear correlation), Spearman’s (for monotonic correlation) and Kendall Tau’s 
         (for class correlation) correlation coefficient and their associated p-values. </p>
       
-        <label for="hex-select"><i>Choose a toxic category</i></label>
+        <label for="hex-select"><b>Choose a toxic category</b></label>
         <select name="hex" id="hex-select">
             <option value="">Identity attack</option>
             <option value="insult">Insult</option>
@@ -383,7 +383,7 @@
             }
             })
         </script>
-
+      
       <table >
           <td style="text-align: center" colspan="7">Alt lite</td>
           <tr>
@@ -478,7 +478,7 @@
         count for all 4 groups considered) . However, looking at the scatter plots, we notice that often 
         there is a very large proportion of videos in one exact spot, especially the one corresponding to 
         videos that have a little view count and a little toxic category score. So what would happen if we 
-        only looked at the top 25 most seen videos (eye emoji)? We’re computing again the scatter plots and 
+        only looked at the top 25 most seen videos &#128064? We’re computing again the scatter plots and 
         the various correlation coefficients.
       </p>
 
@@ -576,7 +576,7 @@
       <p>
         Videos in <b>Alt right</b> and <b>IDW</b> have medium correlation coefficients between their view count and their 
         toxicity (Alt right has a Pearson’s correlation coefficient of 0.4 and IDW has a Spearman correlation 
-        coefficient of 0.5 and both have associated p-value less than 0.5) and Alt-right and IDW also have a 
+        coefficient of 0.5 and both have associated p-value less than 0.05) and Alt-right and IDW also have a 
         higher than 0.4 correlation and p inferior to 0.05 for the toxic categories <i>sexual explicit</i> 
         comments, <i>threat</i>, 
         <i>insult</i>, <i>obscene</i> and <i>severe toxicity</i>. 
@@ -658,10 +658,10 @@
         reflects in numbers throughout time.
         </p>
 
-        <div id="identity_attack"><center><iframe src="assets/graph/Each_cat_tox/final.html" height = "500", 
+        <div id="identity_attack"><center><iframe src="assets/graph/Top25_tox/final.html" height = "500", 
           width = "1000" frameBorder="0"> </iframe></center></div>  
           
-        <div id="identity_attack"><center><iframe src="assets/graph/Each_chan_cat/final.html" height = "500", 
+        <div id="identity_attack"><center><iframe src="assets/graph/Top25_chan/final.html" height = "500", 
           width = "1000" frameBorder="0"> </iframe></center></div>  
 
     <p>The top 25 videos usually have the same or a noticeably higher mean than the overall mean of 
@@ -686,8 +686,8 @@
       category score of its comment section. <br>
       Do notice that the machine learning model <a href="https://github.com/unitaryai/detoxify">Detoxify</a> has a lot of limits even the unbiased version. 
       E.g the formulation of a sentence can make the toxicity vary a lot: <i>'I am at the zoo and I see a 
-        black monkey'</i> has a toxicity of 0.19 and <i>'I saw a black monkey at the zoo'</i> has a toxicity of 0.06. <br>
-      [dataframe in toxic_example.ipynb] WHICH ONE ???? DO I HAVE TO ADD A GRAPH ?<br>
+        black monkey'</i> has a toxicity of 0.19 and <i>'I saw a black monkey at the zoo'</i> has a toxicity of 0.06. 
+      (in [dataframe in toxic_example.ipynb] of the github of the Strauss project) <br>
       The same way, a comment is considered obscene if you use a swear word even in a positive way. For example the sentence <i>“that was fucking brilliant”</i> has an obscene score of ~0.95.
       </p>
 
